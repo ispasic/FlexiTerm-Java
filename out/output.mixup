@@ -1,0 +1,1419 @@
+defSpanType term_1 =: 
+... [ eqi('TNF') eqi('-') eqi('alpha') ] ... ||
+... [ eq('TNF') ] ... ||
+... [ eqi('tumor') eqi('necrosis') eqi('factor') eqi('alpha') ] ... ||
+... [ eqi('tnf') eqi('alpha') ] ... ;
+
+defSpanType term_2 =: 
+... [ eqi('tumor') eqi('necrosis') eqi('factor') ] ... ;
+
+defSpanType term_3 =: 
+... [ eqi('t') eqi('cells') ] ... ;
+
+defSpanType term_4 =: 
+... [ eqi('nf') eqi('-') eqi('kappa') eqi('b') ] ... ||
+... [ eqi('NF') eqi('-') eqi('kappaB') ] ... ||
+... [ eqi('nuclear') eqi('factor') eqi('-') eqi('kappa') eqi('b') ] ... ||
+... [ eqi('nf') eqi('kappa') eqi('b') ] ... ||
+... [ eqi('nuclear') eqi('factor') eqi('kappa') eqi('b') ] ... ||
+... [ eqi('nuclear') eqi('factor') eqi('kappab') ] ... ||
+... [ eqi('nuclear') eqi('factor') eqi('-') eqi('kappab') ] ... ;
+
+defSpanType term_5 =: 
+... [ eqi('transcription') eqi('factor') ] ... ||
+... [ eqi('transcription') eqi('factors') ] ... ||
+... [ eqi('transcriptional') eqi('factors') ] ... ;
+
+defSpanType term_6 =: 
+... [ eqi('gene') eqi('expression') ] ... ||
+... [ eqi('expression') eqi('of') eqi('genes') ] ... ;
+
+defSpanType term_7 =: 
+... [ eqi('activation') eqi('of') eqi('nf') eqi('-') eqi('kappa') eqi('b') ] ... ||
+... [ eqi('nf') eqi('-') eqi('kappa') eqi('b') eqi('activation') ] ... ||
+... [ eqi('nf') eqi('-') eqi('kappa') eqi('b') eqi('activity') ] ... ||
+... [ eqi('nf') eqi('-') eqi('kappab') eqi('activation') ] ... ||
+... [ eqi('nf') eqi('-') eqi('kappab') eqi('activity') ] ... ;
+
+defSpanType term_8 =: 
+... [ eqi('protein') eqi('kinase') ] ... ;
+
+defSpanType term_9 =: 
+... [ eqi('glucocorticoid') eqi('receptor') ] ... ||
+... [ eqi('glucocorticoid') eqi('receptors') ] ... ||
+... [ eq('GR') ] ... ||
+... [ eq('GcR') ] ... ;
+
+defSpanType term_10 =: 
+... [ eqi('human') eqi('cells') ] ... ;
+
+defSpanType term_11 =: 
+... [ eq('CBF') ] ... ||
+... [ eqi('core') eqi('binding') eqi('factor') ] ... ;
+
+defSpanType term_12 =: 
+... [ eqi('transcriptional') eqi('activity') ] ... ||
+... [ eqi('activator') eqi('of') eqi('transcription') ] ... ||
+... [ eqi('transcriptional') eqi('activation') ] ... ||
+... [ eqi('activating') eqi('transcription') ] ... ||
+... [ eqi('activators') eqi('of') eqi('transcription') ] ... ||
+... [ eqi('transcription') eqi('activation') ] ... ||
+... [ eqi('transcriptional') eqi('activator') ] ... ;
+
+defSpanType term_13 =: 
+... [ eq('RA') ] ... ||
+... [ eqi('retinoic') eqi('acid') ] ... ;
+
+defSpanType term_14 =: 
+... [ eqi('GM') eqi('-') eqi('CSF') ] ... ||
+... [ eqi('granulocyte') eqi('-') eqi('macrophage') eqi('colony') eqi('-') eqi('stimulating') eqi('factor') ] ... ;
+
+defSpanType term_15 =: 
+... [ eqi('electrophoretic') eqi('mobility') eqi('shift') eqi('assays') ] ... ||
+... [ eq('EMSA') ] ... ||
+... [ eqi('electrophoretic') eqi('mobility') eqi('shift') eqi('assay') ] ... ||
+... [ eq('EMSAs') ] ... ;
+
+defSpanType term_16 =: 
+... [ eqi('human') eqi('monocytes') ] ... ;
+
+defSpanType term_17 =: 
+... [ eqi('cell') eqi('lines') ] ... ||
+... [ eqi('cell') eqi('line') ] ... ;
+
+defSpanType term_18 =: 
+... [ eq('HIV') ] ... ||
+... [ eqi('human') eqi('immunodeficiency') eqi('virus') ] ... ;
+
+defSpanType term_19 =: 
+... [ eqi('binding') eqi('factors') ] ... ;
+
+defSpanType term_20 =: 
+... [ eqi('protein') eqi('tyrosine') eqi('kinase') ] ... ||
+... [ eq('PTK') ] ... ||
+... [ eqi('protein') eqi('tyrosine') eqi('kinases') ] ... ;
+
+defSpanType term_21 =: 
+... [ eqi('peripheral') eqi('blood') ] ... ;
+
+defSpanType term_22 =: 
+... [ eq('PKC') ] ... ||
+... [ eqi('protein') eqi('kinase') eqi('c') ] ... ;
+
+defSpanType term_23 =: 
+... [ eq('PMA') ] ... ||
+... [ eqi('phorbol') eqi('myristate') eqi('acetate') ] ... ;
+
+defSpanType term_24 =: 
+... [ eqi('t') eqi('lymphocyte') ] ... ||
+... [ eqi('t') eqi('lymphocytes') ] ... ;
+
+defSpanType term_25 =: 
+... [ eqi('tyrosine') eqi('kinase') ] ... ;
+
+defSpanType term_26 =: 
+... [ eqi('activator') eqi('protein') ] ... ||
+... [ eqi('activator') eqi('protein') eqi('-') eqi('1') ] ... ||
+... [ eq('AP') ] ... ;
+
+defSpanType term_27 =: 
+... [ eqi('monocytic') eqi('cells') ] ... ;
+
+defSpanType term_28 =: 
+... [ eqi('b') eqi('cells') ] ... ;
+
+defSpanType term_29 =: 
+... [ eqi('tyrosine') eqi('phosphorylation') ] ... ;
+
+defSpanType term_30 =: 
+... [ eqi('ICAM') eqi('-') eqi('1') ] ... ||
+... [ eqi('intercellular') eqi('adhesion') eqi('molecule') eqi('-') eqi('1') ] ... ;
+
+defSpanType term_31 =: 
+... [ eq('RAR') ] ... ||
+... [ eqi('retinoic') eqi('acid') eqi('receptor') ] ... ;
+
+defSpanType term_32 =: 
+... [ eqi('signal') eqi('transducer') ] ... ||
+... [ eqi('signal') eqi('transducers') ] ... ||
+... [ eqi('signal') eqi('transduction') ] ... ;
+
+defSpanType term_33 =: 
+... [ eqi('cell') eqi('activation') ] ... ;
+
+defSpanType term_34 =: 
+... [ eq('ER') ] ... ||
+... [ eqi('estrogen') eqi('receptor') ] ... ||
+... [ eqi('estrogen') eqi('receptors') ] ... ;
+
+defSpanType term_35 =: 
+... [ eqi('nuclear') eqi('factor') ] ... ;
+
+defSpanType term_36 =: 
+... [ eqi('cbf') eqi('alpha') ] ... ;
+
+defSpanType term_37 =: 
+... [ eqi('erythroid') eqi('cells') ] ... ;
+
+defSpanType term_38 =: 
+... [ eqi('human') eqi('t') eqi('cells') ] ... ;
+
+defSpanType term_39 =: 
+... [ eqi('tnf') eqi('-') eqi('alpha') eqi('release') eqi('in') eqi('human') eqi('monocytes') ] ... ;
+
+defSpanType term_40 =: 
+... [ eqi('gene') eqi('transcription') ] ... ||
+... [ eqi('transcription') eqi('of') eqi('genes') ] ... ;
+
+defSpanType term_41 =: 
+... [ eqi('tnf') eqi('mrna') ] ... ||
+... [ eqi('tnf') eqi('alpha') eqi('mrna') ] ... ;
+
+defSpanType term_42 =: 
+... [ eqi('tnf') eqi('-') eqi('alpha') eqi('release') ] ... ;
+
+defSpanType term_43 =: 
+... [ eqi('binding') eqi('site') ] ... ||
+... [ eqi('binding') eqi('sites') ] ... ;
+
+defSpanType term_44 =: 
+... [ eq('RXR') ] ... ||
+... [ eqi('retinoid') eqi('x') eqi('receptor') ] ... ;
+
+defSpanType term_45 =: 
+... [ eq('PBL') ] ... ||
+... [ eqi('h') eqi('in') eqi('pbl') ] ... ||
+... [ eqi('peripheral') eqi('blood') eqi('lymphocytes') ] ... ;
+
+defSpanType term_46 =: 
+... [ eq('PBMo') ] ... ||
+... [ eqi('peripheral') eqi('blood') eqi('monocytes') ] ... ;
+
+defSpanType term_47 =: 
+... [ eq('CsA') ] ... ||
+... [ eq('CyA') ] ... ||
+... [ eqi('cyclosporin') eqi('a') ] ... ;
+
+defSpanType term_48 =: 
+... [ eqi('cell') eqi('cycle') ] ... ;
+
+defSpanType term_49 =: 
+... [ eqi('kappa') eqi('b') ] ... ;
+
+defSpanType term_50 =: 
+... [ eq('TF') ] ... ||
+... [ eqi('tissue') eqi('factor') ] ... ;
+
+defSpanType term_51 =: 
+... [ eqi('jurkat') eqi('cells') ] ... ;
+
+defSpanType term_52 =: 
+... [ eq('EBV') ] ... ||
+... [ eqi('epstein') eqi('-') eqi('barr') eqi('virus') ] ... ;
+
+defSpanType term_53 =: 
+... [ eqi('endothelial') eqi('cells') ] ... ;
+
+defSpanType term_54 =: 
+... [ eqi('activation') eqi('of') eqi('protein') eqi('kinases') ] ... ;
+
+defSpanType term_55 =: 
+... [ eqi('nuclear') eqi('extracts') ] ... ;
+
+defSpanType term_56 =: 
+... [ eq('MDHM') ] ... ||
+... [ eqi('mycoplasma') eqi('fermentans') eqi('-') eqi('derived') eqi('high') eqi('-') eqi('molecular') eqi('-') eqi('weight') eqi('material') ] ... ;
+
+defSpanType term_57 =: 
+... [ eqi('t') eqi('-') eqi('cell') eqi('activation') ] ... ||
+... [ eqi('t') eqi('cell') eqi('activation') ] ... ;
+
+defSpanType term_58 =: 
+... [ eqi('binding') eqi('activity') ] ... ;
+
+defSpanType term_59 =: 
+... [ eqi('lps') eqi('-') eqi('induced') eqi('nf') eqi('-') eqi('kappab') eqi('activation') ] ... ;
+
+defSpanType term_60 =: 
+... [ eqi('regulatory') eqi('elements') ] ... ;
+
+defSpanType term_61 =: 
+... [ eqi('b') eqi('lymphocytes') ] ... ;
+
+defSpanType term_62 =: 
+... [ eqi('IFN') eqi('-') eqi('gamma') ] ... ||
+... [ eqi('interferon') eqi('gamma') ] ... ;
+
+defSpanType term_63 =: 
+... [ eq('ERK') ] ... ||
+... [ eqi('extracellular') eqi('signal') eqi('-') eqi('regulated') eqi('kinase') ] ... ;
+
+defSpanType term_64 =: 
+... [ eqi('retinoic') eqi('acid') eqi('receptor') eqi('alpha') ] ... ||
+... [ eqi('rar') eqi('alpha') ] ... ;
+
+defSpanType term_65 =: 
+... [ eqi('response') eqi('element') ] ... ;
+
+defSpanType term_66 =: 
+... [ eq('CKII') ] ... ||
+... [ eqi('casein') eqi('kinase') eqi('ii') ] ... ;
+
+defSpanType term_67 =: 
+... [ eqi('transcriptional') eqi('regulator') ] ... ;
+
+defSpanType term_68 =: 
+... [ eq('CTL') ] ... ||
+... [ eqi('cytotoxic') eqi('t') eqi('-') eqi('lymphocyte') ] ... ;
+
+defSpanType term_69 =: 
+... [ eqi('myristate') eqi('acetate') ] ... ;
+
+defSpanType term_70 =: 
+... [ eqi('t') eqi('-') eqi('cell') eqi('lines') ] ... ||
+... [ eqi('t') eqi('-') eqi('cell') eqi('line') ] ... ||
+... [ eqi('t') eqi('cell') eqi('lines') ] ... ;
+
+defSpanType term_71 =: 
+... [ eqi('cbf') eqi('beta') ] ... ;
+
+defSpanType term_72 =: 
+... [ eq('ICER') ] ... ||
+... [ eqi('inducible') eqi('camp') eqi('early') eqi('repressor') ] ... ;
+
+defSpanType term_73 =: 
+... [ eqi('protein') eqi('tyrosine') eqi('kinase') eqi('activity') ] ... ||
+... [ eqi('protein') eqi('tyrosine') eqi('kinase') eqi('activation') ] ... ;
+
+defSpanType term_74 =: 
+... [ eq('NRDS') ] ... ||
+... [ eqi('neonatal') eqi('respiratory') eqi('distress') eqi('syndrome') ] ... ;
+
+defSpanType term_75 =: 
+... [ eqi('hiv') eqi('type') ] ... ||
+... [ eqi('human') eqi('immunodeficiency') eqi('virus') eqi('type') ] ... ;
+
+defSpanType term_76 =: 
+... [ eqi('nuclear') eqi('nf') eqi('-') eqi('kappa') eqi('b') ] ... ;
+
+defSpanType term_77 =: 
+... [ eqi('nf') eqi('-') eqi('kappa') eqi('b') eqi('protein') ] ... ;
+
+defSpanType term_78 =: 
+... [ eqi('activation') eqi('of') eqi('transcription') eqi('factors') ] ... ;
+
+defSpanType term_79 =: 
+... [ eq('ATRA') ] ... ||
+... [ eqi('all') eqi('-') eqi('trans') eqi('retinoic') eqi('acid') ] ... ;
+
+defSpanType term_80 =: 
+... [ eqi('CD') eqi('28') eqi('RE') ] ... ||
+... [ eqi('cd') eqi('28') eqi('response') eqi('element') ] ... ;
+
+defSpanType term_81 =: 
+... [ eqi('human') eqi('t') eqi('lymphocytes') ] ... ;
+
+defSpanType term_82 =: 
+... [ eqi('il') eqi('-') eqi('2') eqi('production') ] ... ;
+
+defSpanType term_83 =: 
+... [ eqi('cell') eqi('surface') ] ... ;
+
+defSpanType term_84 =: 
+... [ eqi('lytic') eqi('cycle') ] ... ;
+
+defSpanType term_85 =: 
+... [ eq('CAT') ] ... ||
+... [ eqi('chloramphenicol') eqi('acetyl') eqi('-') eqi('transferase') ] ... ;
+
+defSpanType term_86 =: 
+... [ eqi('promoter') eqi('activity') ] ... ;
+
+defSpanType term_87 =: 
+... [ eqi('gene') eqi('in') eqi('t') eqi('cells') ] ... ||
+... [ eqi('genes') eqi('in') eqi('t') eqi('cells') ] ... ||
+... [ eqi('genes') eqi('of') eqi('t') eqi('cells') ] ... ;
+
+defSpanType term_88 =: 
+... [ eqi('t') eqi('cell') eqi('responses') ] ... ;
+
+defSpanType term_89 =: 
+... [ eq('TCC') ] ... ||
+... [ eqi('t') eqi('cell') eqi('clones') ] ... ;
+
+defSpanType term_90 =: 
+... [ eqi('cepsilon') eqi('germline') eqi('transcripts') ] ... ;
+
+defSpanType term_91 =: 
+... [ eqi('b') eqi('transcription') eqi('factors') ] ... ;
+
+defSpanType term_92 =: 
+... [ eqi('erythroid') eqi('-') eqi('specific') eqi('gene') eqi('expression') ] ... ||
+... [ eqi('expression') eqi('of') eqi('erythroid') eqi('-') eqi('specific') eqi('genes') ] ... ;
+
+defSpanType term_93 =: 
+... [ eqi('monocytic') eqi('thp') eqi('-') eqi('1') eqi('cells') ] ... ;
+
+defSpanType term_94 =: 
+... [ eq('IHES') ] ... ||
+... [ eqi('idiopathic') eqi('hypereosinophilic') eqi('syndrome') ] ... ;
+
+defSpanType term_95 =: 
+... [ eqi('tcf') eqi('-') eqi('1') eqi('alpha') eqi('binding') eqi('site') ] ... ;
+
+defSpanType term_96 =: 
+... [ eqi('activation') eqi('of') eqi('genes') ] ... ;
+
+defSpanType term_97 =: 
+... [ eqi('globin') eqi('promoter') ] ... ||
+... [ eqi('globin') eqi('promoters') ] ... ;
+
+defSpanType term_98 =: 
+... [ eqi('il') eqi('-') eqi('2') eqi('receptor') ] ... ||
+... [ eqi('IL') eqi('-') eqi('2') eqi('R') ] ... ;
+
+defSpanType term_99 =: 
+... [ eqi('family') eqi('of') eqi('proteins') ] ... ||
+... [ eqi('family') eqi('proteins') ] ... ;
+
+defSpanType term_100 =: 
+... [ eqi('transcription') eqi('factor') eqi('nf') eqi('-') eqi('kappab') ] ... ||
+... [ eqi('transcription') eqi('factor') eqi('nuclear') eqi('factor') eqi('-') eqi('kappa') eqi('b') ] ... ||
+... [ eqi('transcription') eqi('factor') eqi('nuclear') eqi('factor') eqi('-') eqi('kappab') ] ... ;
+
+defSpanType term_101 =: 
+... [ eqi('mrna') eqi('levels') ] ... ||
+... [ eqi('levels') eqi('of') eqi('mrnas') ] ... ;
+
+defSpanType term_102 =: 
+... [ eqi('cells') eqi('in') eqi('response') ] ... ;
+
+defSpanType term_103 =: 
+... [ eqi('coproporphyrinogen') eqi('oxidase') ] ... ||
+... [ eq('CPO') ] ... ;
+
+defSpanType term_104 =: 
+... [ eqi('tnf') eqi('-') eqi('alpha') eqi('production') ] ... ;
+
+defSpanType term_105 =: 
+... [ eqi('differentiated') eqi('cells') ] ... ;
+
+defSpanType term_106 =: 
+... [ eqi('inhibitor') eqi('protein') ] ... ||
+... [ eqi('inhibitory') eqi('protein') ] ... ;
+
+defSpanType term_107 =: 
+... [ eqi('epithelial') eqi('cells') ] ... ;
+
+defSpanType term_108 =: 
+... [ eqi('nf') eqi('-') eqi('kappab') eqi('dna') ] ... ;
+
+defSpanType term_109 =: 
+... [ eqi('lps') eqi('-') eqi('induced') eqi('activity') ] ... ;
+
+defSpanType term_110 =: 
+... [ eqi('tnf') eqi('mrna') eqi('accumulation') ] ... ;
+
+defSpanType term_111 =: 
+... [ eqi('u') eqi('937') eqi('cells') ] ... ;
+
+defSpanType term_112 =: 
+... [ eqi('cushing') eqi('\'') eqi('s') eqi('disease') ] ... ;
+
+defSpanType term_113 =: 
+... [ eqi('surface') eqi('expression') ] ... ;
+
+defSpanType term_114 =: 
+... [ eqi('thp') eqi('-') eqi('1') eqi('cells') ] ... ;
+
+defSpanType term_115 =: 
+... [ eqi('il') eqi('-') eqi('1') eqi('beta') ] ... ;
+
+defSpanType term_116 =: 
+... [ eqi('cell') eqi('adhesion') ] ... ;
+
+defSpanType term_117 =: 
+... [ eqi('stat') eqi('proteins') ] ... ;
+
+defSpanType term_118 =: 
+... [ eqi('p') eqi('elements') ] ... ||
+... [ eqi('p') eqi('element') ] ... ;
+
+defSpanType term_119 =: 
+... [ eqi('cytokine') eqi('genes') ] ... ;
+
+defSpanType term_120 =: 
+... [ eqi('nuclear') eqi('proteins') ] ... ;
+
+defSpanType term_121 =: 
+... [ eqi('induction') eqi('of') eqi('expression') ] ... ;
+
+defSpanType term_122 =: 
+... [ eqi('il') eqi('-') eqi('2') eqi('promoter') ] ... ;
+
+defSpanType term_123 =: 
+... [ eqi('p') eqi('-') eqi('like') eqi('elements') ] ... ;
+
+defSpanType term_124 =: 
+... [ eqi('immune') eqi('system') ] ... ;
+
+defSpanType term_125 =: 
+... [ eqi('PGE') eqi('2') ] ... ||
+... [ eqi('prostaglandin') eqi('e') eqi('2') ] ... ;
+
+defSpanType term_126 =: 
+... [ eqi('gene') eqi('induction') ] ... ;
+
+defSpanType term_127 =: 
+... [ eqi('functions') eqi('of') eqi('cells') ] ... ;
+
+defSpanType term_128 =: 
+... [ eqi('tcr') eqi('alpha') eqi('enhancer') ] ... ;
+
+defSpanType term_129 =: 
+... [ eqi('polymerase') eqi('chain') eqi('reaction') ] ... ||
+... [ eq('PCR') ] ... ;
+
+defSpanType term_130 =: 
+... [ eqi('kappa') eqi('b') eqi('enhancer') ] ... ;
+
+defSpanType term_131 =: 
+... [ eqi('number') eqi('of') eqi('glucocorticoid') eqi('receptors') ] ... ||
+... [ eqi('number') eqi('of') eqi('gr') ] ... ;
+
+defSpanType term_132 =: 
+... [ eqi('kappa') eqi('b') eqi('-') eqi('like') eqi('site') ] ... ;
+
+defSpanType term_133 =: 
+... [ eqi('tf') eqi('gene') ] ... ;
+
+defSpanType term_134 =: 
+... [ eqi('tf') eqi('site') ] ... ;
+
+defSpanType term_135 =: 
+... [ eqi('syk') eqi('tyrosine') eqi('kinase') ] ... ||
+... [ eqi('tyrosine') eqi('kinase') eqi('syk') ] ... ;
+
+defSpanType term_136 =: 
+... [ eqi('gamma') eqi('response') eqi('region') ] ... ||
+... [ eq('GRR') ] ... ;
+
+defSpanType term_137 =: 
+... [ eqi('acute') eqi('promyelocytic') eqi('leukemia') ] ... ||
+... [ eq('APL') ] ... ;
+
+defSpanType term_138 =: 
+... [ eqi('ifn') eqi('-') eqi('gamma') eqi('production') ] ... ||
+... [ eqi('production') eqi('of') eqi('ifn') eqi('-') eqi('gamma') ] ... ;
+
+defSpanType term_139 =: 
+... [ eqi('dna') eqi('binding') eqi('activity') ] ... ;
+
+defSpanType term_140 =: 
+... [ eqi('il') eqi('-') eqi('1') eqi('beta') eqi('promoter') eqi('activity') ] ... ;
+
+defSpanType term_141 =: 
+... [ eqi('erythroid') eqi('cell') eqi('survival') ] ... ;
+
+defSpanType term_142 =: 
+... [ eqi('bronchial') eqi('epithelial') eqi('cells') ] ... ;
+
+defSpanType term_143 =: 
+... [ eqi('serine') eqi('phosphorylation') eqi('of') eqi('stat') eqi('3') ] ... ;
+
+defSpanType term_144 =: 
+... [ eqi('human') eqi('monocytic') eqi('cells') ] ... ;
+
+defSpanType term_145 =: 
+... [ eqi('nuclear') eqi('translocation') ] ... ;
+
+defSpanType term_146 =: 
+... [ eqi('transient') eqi('expression') ] ... ;
+
+defSpanType term_147 =: 
+... [ eqi('hiv') eqi('-') eqi('1') eqi('replication') ] ... ;
+
+defSpanType term_148 =: 
+... [ eqi('il') eqi('-') eqi('9') eqi('gene') ] ... ;
+
+defSpanType term_149 =: 
+... [ eqi('cbf') eqi('alpha') eqi('subunit') ] ... ;
+
+defSpanType term_150 =: 
+... [ eqi('tcf') eqi('-') eqi('1') eqi('alpha') ] ... ;
+
+defSpanType term_151 =: 
+... [ eqi('blood') eqi('cells') ] ... ;
+
+defSpanType term_152 =: 
+... [ eqi('phorbol') eqi('ester') ] ... ;
+
+defSpanType term_153 =: 
+... [ eqi('cell') eqi('type') ] ... ||
+... [ eqi('cell') eqi('types') ] ... ;
+
+defSpanType term_154 =: 
+... [ eq('AD') ] ... ||
+... [ eqi('alzheimer') eqi('\'') eqi('s') eqi('disease') ] ... ;
+
+defSpanType term_155 =: 
+... [ eqi('enhanced') eqi('activity') ] ... ||
+... [ eqi('enhancer') eqi('activity') ] ... ;
+
+defSpanType term_156 =: 
+... [ eqi('immune') eqi('response') ] ... ||
+... [ eqi('immune') eqi('responses') ] ... ;
+
+defSpanType term_157 =: 
+... [ eqi('activity') eqi('of') eqi('dna') ] ... ;
+
+defSpanType term_158 =: 
+... [ eqi('nuclear') eqi('compartment') ] ... ||
+... [ eqi('nuclear') eqi('compartments') ] ... ;
+
+defSpanType term_159 =: 
+... [ eqi('nonerythroid') eqi('cells') ] ... ;
+
+defSpanType term_160 =: 
+... [ eqi('human') eqi('peripheral') eqi('blood') eqi('monocytes') ] ... ;
+
+defSpanType term_161 =: 
+... [ eqi('monocytic') eqi('thp') eqi('-') eqi('1') eqi('cell') eqi('line') ] ... ;
+
+defSpanType term_162 =: 
+... [ eqi('nuclear') eqi('complex') ] ... ||
+... [ eqi('nuclear') eqi('complexes') ] ... ;
+
+defSpanType term_163 =: 
+... [ eqi('alpha') eqi('b') ] ... ;
+
+defSpanType term_164 =: 
+... [ eqi('high') eqi('levels') ] ... ;
+
+defSpanType term_165 =: 
+... [ eqi('inhibitory') eqi('effect') ] ... ;
+
+defSpanType term_166 =: 
+... [ eqi('t') eqi('cells') eqi('of') eqi('elderly') eqi('individuals') ] ... ;
+
+defSpanType term_167 =: 
+... [ eqi('expression') eqi('of') eqi('il') eqi('-') eqi('2') ] ... ;
+
+defSpanType term_168 =: 
+... [ eqi('critical') eqi('role') ] ... ;
+
+defSpanType term_169 =: 
+... [ eqi('myeloid') eqi('cells') ] ... ;
+
+defSpanType term_170 =: 
+... [ eqi('embryonic') eqi('-') eqi('fetal') eqi('liver') ] ... ||
+... [ eq('FL') ] ... ;
+
+defSpanType term_171 =: 
+... [ eqi('activity') eqi('of') eqi('lymphocytes') ] ... ||
+... [ eqi('lymphocyte') eqi('activation') ] ... ;
+
+defSpanType term_172 =: 
+... [ eqi('activation') eqi('of') eqi('human') eqi('t') eqi('cells') ] ... ||
+... [ eqi('activities') eqi('on') eqi('human') eqi('t') eqi('cells') ] ... ;
+
+defSpanType term_173 =: 
+... [ eqi('family') eqi('members') ] ... ;
+
+defSpanType term_174 =: 
+... [ eqi('human') eqi('leukemias') ] ... ;
+
+defSpanType term_175 =: 
+... [ eq('PDTC') ] ... ||
+... [ eqi('pyrrolidine') eqi('dtc') ] ... ;
+
+defSpanType term_176 =: 
+... [ eqi('binding') eqi('proteins') ] ... ;
+
+defSpanType term_177 =: 
+... [ eqi('lps') eqi('-') eqi('induced') eqi('nf') eqi('-') eqi('kappab') eqi('dna') ] ... ;
+
+defSpanType term_178 =: 
+... [ eq('MS') ] ... ||
+... [ eqi('multiple') eqi('sclerosis') ] ... ;
+
+defSpanType term_179 =: 
+... [ eqi('neutrophil') eqi('maturation') ] ... ;
+
+defSpanType term_180 =: 
+... [ eqi('cat') eqi('reporter') ] ... ;
+
+defSpanType term_181 =: 
+... [ eqi('reporter') eqi('gene') ] ... ;
+
+defSpanType term_182 =: 
+... [ eqi('beta') eqi('interferon') eqi('promoter') ] ... ;
+
+defSpanType term_183 =: 
+... [ eqi('human') eqi('mononuclear') eqi('cells') ] ... ;
+
+defSpanType term_184 =: 
+... [ eqi('androgen') eqi('receptor') eqi('gene') ] ... ;
+
+defSpanType term_185 =: 
+... [ eqi('specific') eqi('nuclear') eqi('translocation') ] ... ;
+
+defSpanType term_186 =: 
+... [ eqi('new') eqi('transcription') eqi('factor') ] ... ;
+
+defSpanType term_187 =: 
+... [ eqi('ap') eqi('-') eqi('1') eqi('transcription') eqi('factor') ] ... ||
+... [ eqi('transcriptional') eqi('factors') eqi('ap') eqi('-') eqi('1') ] ... ;
+
+defSpanType term_188 =: 
+... [ eqi('phospholipase') eqi('c') eqi('gamma') ] ... ;
+
+defSpanType term_189 =: 
+... [ eqi('ebv') eqi('sm') ] ... ;
+
+defSpanType term_190 =: 
+... [ eqi('transcription') eqi('in') eqi('t') eqi('cells') ] ... ;
+
+defSpanType term_191 =: 
+... [ eqi('50') eqi('-') eqi('kda') eqi('nf') eqi('-') eqi('kappa') eqi('b') ] ... ;
+
+defSpanType term_192 =: 
+... [ eqi('regulation') eqi('of') eqi('gene') eqi('expression') ] ... ;
+
+defSpanType term_193 =: 
+... [ eqi('dna') eqi('binding') eqi('specificities') ] ... ;
+
+defSpanType term_194 =: 
+... [ eqi('rna') eqi('polymerase') eqi('ii') ] ... ;
+
+defSpanType term_195 =: 
+... [ eqi('lower') eqi('molecular') eqi('weight') ] ... ;
+
+defSpanType term_196 =: 
+... [ eqi('expression') eqi('of') eqi('cd') eqi('40') eqi('antigen') ] ... ;
+
+defSpanType term_197 =: 
+... [ eqi('hematopoietic') eqi('growth') eqi('factor') ] ... ||
+... [ eq('HGF') ] ... ;
+
+defSpanType term_198 =: 
+... [ eqi('nf') eqi('-') eqi('kappa') eqi('b') eqi('level') ] ... ;
+
+defSpanType term_199 =: 
+... [ eqi('kappa') eqi('light') eqi('chain') ] ... ;
+
+defSpanType term_200 =: 
+... [ eqi('nf') eqi('-') eqi('kappab') eqi('inhibitors') ] ... ;
+
+defSpanType term_201 =: 
+... [ eqi('gata') eqi('-') eqi('1') eqi('and') eqi('-') eqi('binding') eqi('proteins') ] ... ;
+
+defSpanType term_202 =: 
+... [ eqi('fetal') eqi('blood') eqi('cells') ] ... ;
+
+defSpanType term_203 =: 
+... [ eqi('dna') eqi('binding') eqi('motif') ] ... ;
+
+defSpanType term_204 =: 
+... [ eqi('cord') eqi('blood') eqi('lymphocytes') ] ... ;
+
+defSpanType term_205 =: 
+... [ eqi('erythroid') eqi('cell') eqi('development') ] ... ;
+
+defSpanType term_206 =: 
+... [ eqi('lytic') eqi('cycle') eqi('genes') ] ... ;
+
+defSpanType term_207 =: 
+... [ eq('FISH') ] ... ||
+... [ eqi('fluorescence') eqi('in') eqi('situ') eqi('hybridization') ] ... ;
+
+defSpanType term_208 =: 
+... [ eqi('gr') eqi('in') eqi('lymphocytes') ] ... ;
+
+defSpanType term_209 =: 
+... [ eqi('normal') eqi('human') eqi('monocytes') ] ... ;
+
+defSpanType term_210 =: 
+... [ eqi('murine') eqi('t') eqi('cells') ] ... ;
+
+defSpanType term_211 =: 
+... [ eqi('role') eqi('of') eqi('retinoic') eqi('acid') ] ... ;
+
+defSpanType term_212 =: 
+... [ eqi('normal') eqi('cells') ] ... ;
+
+defSpanType term_213 =: 
+... [ eqi('viral') eqi('production') ] ... ;
+
+defSpanType term_214 =: 
+... [ eqi('receptor') eqi('alpha') eqi('chain') ] ... ||
+... [ eqi('receptor') eqi('alpha') eqi('-') eqi('chain') ] ... ;
+
+defSpanType term_215 =: 
+... [ eqi('number') eqi('of') eqi('receptors') ] ... ;
+
+defSpanType term_216 =: 
+... [ eqi('zinc') eqi('fingers') ] ... ;
+
+defSpanType term_217 =: 
+... [ eqi('globin') eqi('gene') ] ... ;
+
+defSpanType term_218 =: 
+... [ eqi('site') eqi('-') eqi('directed') eqi('mutagenesis') ] ... ;
+
+defSpanType term_219 =: 
+... [ eqi('cell') eqi('receptor') ] ... ;
+
+defSpanType term_220 =: 
+... [ eqi('cellular') eqi('proliferation') ] ... ;
+
+defSpanType term_221 =: 
+... [ eqi('rel') eqi('proteins') ] ... ;
+
+defSpanType term_222 =: 
+... [ eqi('ltr') eqi('activation') ] ... ;
+
+defSpanType term_223 =: 
+... [ eqi('monocyte') eqi('adhesion') ] ... ;
+
+defSpanType term_224 =: 
+... [ eqi('immediate') eqi('-') eqi('early') eqi('genes') ] ... ;
+
+defSpanType term_225 =: 
+... [ eqi('lps') eqi('response') ] ... ||
+... [ eqi('lps') eqi('responsiveness') ] ... ;
+
+defSpanType term_226 =: 
+... [ eqi('physical') eqi('linkage') ] ... ;
+
+defSpanType term_227 =: 
+... [ eqi('il') eqi('-') eqi('4') eqi('promoter') ] ... ;
+
+defSpanType term_228 =: 
+... [ eqi('important') eqi('role') ] ... ;
+
+defSpanType term_229 =: 
+... [ eqi('cell') eqi('cultures') ] ... ;
+
+defSpanType term_230 =: 
+... [ eqi('levels') eqi('of') eqi('il') eqi('-') eqi('2') ] ... ;
+
+defSpanType term_231 =: 
+... [ eqi('activation') eqi('of') eqi('ap') eqi('-') eqi('1') ] ... ;
+
+defSpanType term_232 =: 
+... [ eqi('activation') eqi('of') eqi('nf') eqi('-') eqi('at') ] ... ||
+... [ eqi('nf') eqi('-') eqi('at') eqi('activation') ] ... ;
+
+defSpanType term_233 =: 
+... [ eqi('higher') eqi('levels') ] ... ;
+
+defSpanType term_234 =: 
+... [ eqi('cytokine') eqi('production') ] ... ||
+... [ eqi('production') eqi('of') eqi('cytokines') ] ... ;
+
+defSpanType term_235 =: 
+... [ eqi('il') eqi('-') eqi('4') eqi('receptor') ] ... ||
+... [ eqi('IL') eqi('-') eqi('4') eqi('R') ] ... ;
+
+defSpanType term_236 =: 
+... [ eqi('94') eqi('-') eqi('kd') eqi('stat') eqi('5') eqi('a') ] ... ;
+
+defSpanType term_237 =: 
+... [ eqi('transient') eqi('transfection') ] ... ;
+
+defSpanType term_238 =: 
+... [ eqi('cd') eqi('40') eqi('antigen') ] ... ;
+
+defSpanType term_239 =: 
+... [ eqi('present') eqi('study') ] ... ;
+
+defSpanType term_240 =: 
+... [ eqi('inflammatory') eqi('response') ] ... ||
+... [ eqi('inflammatory') eqi('responses') ] ... ;
+
+defSpanType term_241 =: 
+... [ eqi('il') eqi('-') eqi('4') eqi('ralpha') eqi('chain') ] ... ;
+
+defSpanType term_242 =: 
+... [ eqi('amino') eqi('acids') ] ... ;
+
+defSpanType term_243 =: 
+... [ eqi('specific') eqi('complex') ] ... ||
+... [ eqi('specific') eqi('complexes') ] ... ;
+
+defSpanType term_244 =: 
+... [ eqi('plc') eqi('gamma') ] ... ;
+
+defSpanType term_245 =: 
+... [ eqi('nf') eqi('-') eqi('kappa') eqi('b') eqi('1') ] ... ;
+
+defSpanType term_246 =: 
+... [ eqi('tolerant') eqi('cells') ] ... ;
+
+defSpanType term_247 =: 
+... [ eqi('lai') eqi('ltr') ] ... ;
+
+defSpanType term_248 =: 
+... [ eqi('dose') eqi('-') eqi('dependent') eqi('manner') ] ... ;
+
+defSpanType term_249 =: 
+... [ eqi('environmental') eqi('estrogens') ] ... ;
+
+defSpanType term_250 =: 
+... [ eqi('sodium') eqi('salicylate') ] ... ;
+
+defSpanType term_251 =: 
+... [ eq('SE') ] ... ||
+... [ eqi('staphylococcal') eqi('enterotoxin') ] ... ;
+
+defSpanType term_252 =: 
+... [ eqi('stat') eqi('3') eqi('activation') ] ... ;
+
+defSpanType term_253 =: 
+... [ eqi('monocyte') eqi('apoptosis') ] ... ;
+
+defSpanType term_254 =: 
+... [ eqi('induction') eqi('of') eqi('apoptosis') ] ... ;
+
+defSpanType term_255 =: 
+... [ eqi('specific') eqi('translocation') ] ... ;
+
+defSpanType term_256 =: 
+... [ eqi('situ') eqi('hybridization') ] ... ;
+
+defSpanType term_257 =: 
+... [ eqi('il') eqi('-') eqi('13') eqi('gene') ] ... ;
+
+defSpanType term_258 =: 
+... [ eqi('icam') eqi('-') eqi('1') eqi('kappa') eqi('b') ] ... ;
+
+defSpanType term_259 =: 
+... [ eqi('cell') eqi('population') ] ... ||
+... [ eqi('cell') eqi('populations') ] ... ;
+
+defSpanType term_260 =: 
+... [ eqi('jurkat') eqi('t') ] ... ;
+
+defSpanType term_261 =: 
+... [ eqi('mononuclear') eqi('leukocytes') ] ... ;
+
+defSpanType term_262 =: 
+... [ eqi('hela') eqi('cells') ] ... ;
+
+defSpanType term_263 =: 
+... [ eqi('alpha') eqi('activity') ] ... ;
+
+defSpanType term_264 =: 
+... [ eqi('receptor') eqi('levels') ] ... ;
+
+defSpanType term_265 =: 
+... [ eqi('hl') eqi('60') eqi('cells') ] ... ;
+
+defSpanType term_266 =: 
+... [ eqi('hypertensive') eqi('patients') ] ... ;
+
+defSpanType term_267 =: 
+... [ eqi('k') eqi('562') eqi('cells') ] ... ;
+
+defSpanType term_268 =: 
+... [ eqi('cell') eqi('proliferation') ] ... ;
+
+defSpanType term_269 =: 
+... [ eqi('pathways') eqi('t') ] ... ;
+
+defSpanType term_270 =: 
+... [ eqi('transient') eqi('pseudohypoaldosteronism') ] ... ;
+
+defSpanType term_271 =: 
+... [ eqi('aldosterone') eqi('receptors') ] ... ;
+
+defSpanType term_272 =: 
+... [ eqi('protein') eqi('level') ] ... ||
+... [ eqi('protein') eqi('levels') ] ... ;
+
+defSpanType term_273 =: 
+... [ eqi('primary') eqi('cells') ] ... ;
+
+defSpanType term_274 =: 
+... [ eqi('p') eqi('50') eqi('homodimer') ] ... ||
+... [ eqi('p') eqi('50') eqi('homodimers') ] ... ;
+
+defSpanType term_275 =: 
+... [ eqi('complex') eqi('in') eqi('response') ] ... ;
+
+defSpanType term_276 =: 
+... [ eqi('sm') eqi('protein') ] ... ;
+
+defSpanType term_277 =: 
+... [ eqi('pebp') eqi('2') eqi('alpha') ] ... ;
+
+defSpanType term_278 =: 
+... [ eqi('dna') eqi('binding') eqi('subunit') ] ... ||
+... [ eqi('dna') eqi('-') eqi('binding') eqi('subunit') ] ... ;
+
+defSpanType term_279 =: 
+... [ eqi('induction') eqi('of') eqi('vcam') eqi('-') eqi('1') ] ... ;
+
+defSpanType term_280 =: 
+... [ eqi('tyrosine') eqi('kinase') eqi('inhibitors') eqi('genistein') ] ... ;
+
+defSpanType term_281 =: 
+... [ eqi('steroid') eqi('hormone') ] ... ;
+
+defSpanType term_282 =: 
+... [ eqi('24') eqi(',') eqi('25') eqi('-') eqi('dihydroxyvitamin') eqi('d') eqi('3') ] ... ;
+
+defSpanType term_283 =: 
+... [ eqi('unprimed') eqi('cells') ] ... ;
+
+defSpanType term_284 =: 
+... [ eqi('lps') eqi('stimulation') ] ... ;
+
+defSpanType term_285 =: 
+... [ eqi('il') eqi('-') eqi('4') eqi('gene') ] ... ||
+... [ eqi('il') eqi('-') eqi('4') eqi('genes') ] ... ;
+
+defSpanType term_286 =: 
+... [ eqi('tax') eqi('protein') ] ... ;
+
+defSpanType term_287 =: 
+... [ eqi('potent') eqi('activator') ] ... ;
+
+defSpanType term_288 =: 
+... [ eqi('human') eqi('interleukin') ] ... ;
+
+defSpanType term_289 =: 
+... [ eqi('inducible') eqi('expression') ] ... ;
+
+defSpanType term_290 =: 
+... [ eqi('ap') eqi('-') eqi('1') eqi('site') ] ... ;
+
+defSpanType term_291 =: 
+... [ eqi('janus') eqi('kinase') ] ... ;
+
+defSpanType term_292 =: 
+... [ eqi('hiv') eqi('-') eqi('1') eqi('ltr') ] ... ;
+
+defSpanType term_293 =: 
+... [ eqi('supershift') eqi('assay') ] ... ;
+
+defSpanType term_294 =: 
+... [ eqi('human') eqi('thymocytes') ] ... ;
+
+defSpanType term_295 =: 
+... [ eqi('saa') eqi('gene') ] ... ;
+
+defSpanType term_296 =: 
+... [ eqi('hydrolytic') eqi('activity') ] ... ;
+
+defSpanType term_297 =: 
+... [ eqi('specific') eqi('gene') ] ... ;
+
+defSpanType term_298 =: 
+... [ eqi('erythroid') eqi('differentiation') ] ... ;
+
+defSpanType term_299 =: 
+... [ eqi('anti') eqi('-') eqi('cd') eqi('3') eqi('stimulation') ] ... ;
+
+defSpanType term_300 =: 
+... [ eqi('lps') eqi('tolerance') ] ... ;
+
+defSpanType term_301 =: 
+... [ eqi('binding') eqi('affinity') ] ... ;
+
+defSpanType term_302 =: 
+... [ eqi('expression') eqi('of') eqi('transcription') ] ... ;
+
+defSpanType term_303 =: 
+... [ eqi('dna') eqi('sequences') ] ... ;
+
+defSpanType term_304 =: 
+... [ eqi('agonist') eqi('activity') ] ... ;
+
+defSpanType term_305 =: 
+... [ eqi('plasma') eqi('membrane') ] ... ;
+
+defSpanType term_306 =: 
+... [ eqi('x') eqi('-') eqi('inactivation') eqi('patterns') ] ... ;
+
+defSpanType term_307 =: 
+... [ eqi('cox') eqi('-') eqi('2') eqi('expression') ] ... ;
+
+defSpanType term_308 =: 
+... [ eqi('steroid') eqi('treatments') ] ... ;
+
+defSpanType term_309 =: 
+... [ eqi('trancriptional') eqi('roles') ] ... ;
+
+defSpanType term_310 =: 
+... [ eqi('mo') eqi('7') eqi('e') eqi('cells') ] ... ;
+
+defSpanType term_311 =: 
+... [ eqi('superoxide') eqi('release') ] ... ;
+
+defSpanType term_312 =: 
+... [ eqi('beas') eqi('-') eqi('2') eqi('b') eqi('cells') ] ... ;
+
+defSpanType term_313 =: 
+... [ eqi('microbial') eqi('lipoproteins') ] ... ;
+
+defSpanType term_314 =: 
+... [ eq('TLRs') ] ... ||
+... [ eqi('toll') eqi('-') eqi('like') eqi('receptors') ] ... ;
+
+defSpanType term_315 =: 
+... [ eqi('heterodimer') eqi('complex') eqi('formation') ] ... ;
+
+defSpanType term_316 =: 
+... [ eqi('human') eqi('endothelial') eqi('cells') ] ... ;
+
+defSpanType term_317 =: 
+... [ eqi('respiratory') eqi('distress') eqi('syndrome') ] ... ;
+
+defSpanType term_318 =: 
+... [ eqi('number') eqi('of') eqi('glucocorticoid') ] ... ;
+
+defSpanType term_319 =: 
+... [ eqi('cytokine') eqi('profiles') ] ... ;
+
+defSpanType term_320 =: 
+... [ eqi('natl') eqi('.') eqi('acad') ] ... ;
+
+defSpanType term_321 =: 
+... [ eqi('il') eqi('-') eqi('1') eqi('beta') eqi('promoter') ] ... ;
+
+defSpanType term_322 =: 
+... [ eqi('hypereosinophilic') eqi('syndrome') ] ... ;
+
+defSpanType term_323 =: 
+... [ eqi('cell') eqi('survival') ] ... ;
+
+defSpanType term_324 =: 
+... [ eqi('cd') eqi('3') eqi('ligation') ] ... ;
+
+defSpanType term =: ... [ @term_1 ] ...;
+defSpanType term =: ... [ @term_2 ] ...;
+defSpanType term =: ... [ @term_3 ] ...;
+defSpanType term =: ... [ @term_4 ] ...;
+defSpanType term =: ... [ @term_5 ] ...;
+defSpanType term =: ... [ @term_6 ] ...;
+defSpanType term =: ... [ @term_7 ] ...;
+defSpanType term =: ... [ @term_8 ] ...;
+defSpanType term =: ... [ @term_9 ] ...;
+defSpanType term =: ... [ @term_10 ] ...;
+defSpanType term =: ... [ @term_11 ] ...;
+defSpanType term =: ... [ @term_12 ] ...;
+defSpanType term =: ... [ @term_13 ] ...;
+defSpanType term =: ... [ @term_14 ] ...;
+defSpanType term =: ... [ @term_15 ] ...;
+defSpanType term =: ... [ @term_16 ] ...;
+defSpanType term =: ... [ @term_17 ] ...;
+defSpanType term =: ... [ @term_18 ] ...;
+defSpanType term =: ... [ @term_19 ] ...;
+defSpanType term =: ... [ @term_20 ] ...;
+defSpanType term =: ... [ @term_21 ] ...;
+defSpanType term =: ... [ @term_22 ] ...;
+defSpanType term =: ... [ @term_23 ] ...;
+defSpanType term =: ... [ @term_24 ] ...;
+defSpanType term =: ... [ @term_25 ] ...;
+defSpanType term =: ... [ @term_26 ] ...;
+defSpanType term =: ... [ @term_27 ] ...;
+defSpanType term =: ... [ @term_28 ] ...;
+defSpanType term =: ... [ @term_29 ] ...;
+defSpanType term =: ... [ @term_30 ] ...;
+defSpanType term =: ... [ @term_31 ] ...;
+defSpanType term =: ... [ @term_32 ] ...;
+defSpanType term =: ... [ @term_33 ] ...;
+defSpanType term =: ... [ @term_34 ] ...;
+defSpanType term =: ... [ @term_35 ] ...;
+defSpanType term =: ... [ @term_36 ] ...;
+defSpanType term =: ... [ @term_37 ] ...;
+defSpanType term =: ... [ @term_38 ] ...;
+defSpanType term =: ... [ @term_39 ] ...;
+defSpanType term =: ... [ @term_40 ] ...;
+defSpanType term =: ... [ @term_41 ] ...;
+defSpanType term =: ... [ @term_42 ] ...;
+defSpanType term =: ... [ @term_43 ] ...;
+defSpanType term =: ... [ @term_44 ] ...;
+defSpanType term =: ... [ @term_45 ] ...;
+defSpanType term =: ... [ @term_46 ] ...;
+defSpanType term =: ... [ @term_47 ] ...;
+defSpanType term =: ... [ @term_48 ] ...;
+defSpanType term =: ... [ @term_49 ] ...;
+defSpanType term =: ... [ @term_50 ] ...;
+defSpanType term =: ... [ @term_51 ] ...;
+defSpanType term =: ... [ @term_52 ] ...;
+defSpanType term =: ... [ @term_53 ] ...;
+defSpanType term =: ... [ @term_54 ] ...;
+defSpanType term =: ... [ @term_55 ] ...;
+defSpanType term =: ... [ @term_56 ] ...;
+defSpanType term =: ... [ @term_57 ] ...;
+defSpanType term =: ... [ @term_58 ] ...;
+defSpanType term =: ... [ @term_59 ] ...;
+defSpanType term =: ... [ @term_60 ] ...;
+defSpanType term =: ... [ @term_61 ] ...;
+defSpanType term =: ... [ @term_62 ] ...;
+defSpanType term =: ... [ @term_63 ] ...;
+defSpanType term =: ... [ @term_64 ] ...;
+defSpanType term =: ... [ @term_65 ] ...;
+defSpanType term =: ... [ @term_66 ] ...;
+defSpanType term =: ... [ @term_67 ] ...;
+defSpanType term =: ... [ @term_68 ] ...;
+defSpanType term =: ... [ @term_69 ] ...;
+defSpanType term =: ... [ @term_70 ] ...;
+defSpanType term =: ... [ @term_71 ] ...;
+defSpanType term =: ... [ @term_72 ] ...;
+defSpanType term =: ... [ @term_73 ] ...;
+defSpanType term =: ... [ @term_74 ] ...;
+defSpanType term =: ... [ @term_75 ] ...;
+defSpanType term =: ... [ @term_76 ] ...;
+defSpanType term =: ... [ @term_77 ] ...;
+defSpanType term =: ... [ @term_78 ] ...;
+defSpanType term =: ... [ @term_79 ] ...;
+defSpanType term =: ... [ @term_80 ] ...;
+defSpanType term =: ... [ @term_81 ] ...;
+defSpanType term =: ... [ @term_82 ] ...;
+defSpanType term =: ... [ @term_83 ] ...;
+defSpanType term =: ... [ @term_84 ] ...;
+defSpanType term =: ... [ @term_85 ] ...;
+defSpanType term =: ... [ @term_86 ] ...;
+defSpanType term =: ... [ @term_87 ] ...;
+defSpanType term =: ... [ @term_88 ] ...;
+defSpanType term =: ... [ @term_89 ] ...;
+defSpanType term =: ... [ @term_90 ] ...;
+defSpanType term =: ... [ @term_91 ] ...;
+defSpanType term =: ... [ @term_92 ] ...;
+defSpanType term =: ... [ @term_93 ] ...;
+defSpanType term =: ... [ @term_94 ] ...;
+defSpanType term =: ... [ @term_95 ] ...;
+defSpanType term =: ... [ @term_96 ] ...;
+defSpanType term =: ... [ @term_97 ] ...;
+defSpanType term =: ... [ @term_98 ] ...;
+defSpanType term =: ... [ @term_99 ] ...;
+defSpanType term =: ... [ @term_100 ] ...;
+defSpanType term =: ... [ @term_101 ] ...;
+defSpanType term =: ... [ @term_102 ] ...;
+defSpanType term =: ... [ @term_103 ] ...;
+defSpanType term =: ... [ @term_104 ] ...;
+defSpanType term =: ... [ @term_105 ] ...;
+defSpanType term =: ... [ @term_106 ] ...;
+defSpanType term =: ... [ @term_107 ] ...;
+defSpanType term =: ... [ @term_108 ] ...;
+defSpanType term =: ... [ @term_109 ] ...;
+defSpanType term =: ... [ @term_110 ] ...;
+defSpanType term =: ... [ @term_111 ] ...;
+defSpanType term =: ... [ @term_112 ] ...;
+defSpanType term =: ... [ @term_113 ] ...;
+defSpanType term =: ... [ @term_114 ] ...;
+defSpanType term =: ... [ @term_115 ] ...;
+defSpanType term =: ... [ @term_116 ] ...;
+defSpanType term =: ... [ @term_117 ] ...;
+defSpanType term =: ... [ @term_118 ] ...;
+defSpanType term =: ... [ @term_119 ] ...;
+defSpanType term =: ... [ @term_120 ] ...;
+defSpanType term =: ... [ @term_121 ] ...;
+defSpanType term =: ... [ @term_122 ] ...;
+defSpanType term =: ... [ @term_123 ] ...;
+defSpanType term =: ... [ @term_124 ] ...;
+defSpanType term =: ... [ @term_125 ] ...;
+defSpanType term =: ... [ @term_126 ] ...;
+defSpanType term =: ... [ @term_127 ] ...;
+defSpanType term =: ... [ @term_128 ] ...;
+defSpanType term =: ... [ @term_129 ] ...;
+defSpanType term =: ... [ @term_130 ] ...;
+defSpanType term =: ... [ @term_131 ] ...;
+defSpanType term =: ... [ @term_132 ] ...;
+defSpanType term =: ... [ @term_133 ] ...;
+defSpanType term =: ... [ @term_134 ] ...;
+defSpanType term =: ... [ @term_135 ] ...;
+defSpanType term =: ... [ @term_136 ] ...;
+defSpanType term =: ... [ @term_137 ] ...;
+defSpanType term =: ... [ @term_138 ] ...;
+defSpanType term =: ... [ @term_139 ] ...;
+defSpanType term =: ... [ @term_140 ] ...;
+defSpanType term =: ... [ @term_141 ] ...;
+defSpanType term =: ... [ @term_142 ] ...;
+defSpanType term =: ... [ @term_143 ] ...;
+defSpanType term =: ... [ @term_144 ] ...;
+defSpanType term =: ... [ @term_145 ] ...;
+defSpanType term =: ... [ @term_146 ] ...;
+defSpanType term =: ... [ @term_147 ] ...;
+defSpanType term =: ... [ @term_148 ] ...;
+defSpanType term =: ... [ @term_149 ] ...;
+defSpanType term =: ... [ @term_150 ] ...;
+defSpanType term =: ... [ @term_151 ] ...;
+defSpanType term =: ... [ @term_152 ] ...;
+defSpanType term =: ... [ @term_153 ] ...;
+defSpanType term =: ... [ @term_154 ] ...;
+defSpanType term =: ... [ @term_155 ] ...;
+defSpanType term =: ... [ @term_156 ] ...;
+defSpanType term =: ... [ @term_157 ] ...;
+defSpanType term =: ... [ @term_158 ] ...;
+defSpanType term =: ... [ @term_159 ] ...;
+defSpanType term =: ... [ @term_160 ] ...;
+defSpanType term =: ... [ @term_161 ] ...;
+defSpanType term =: ... [ @term_162 ] ...;
+defSpanType term =: ... [ @term_163 ] ...;
+defSpanType term =: ... [ @term_164 ] ...;
+defSpanType term =: ... [ @term_165 ] ...;
+defSpanType term =: ... [ @term_166 ] ...;
+defSpanType term =: ... [ @term_167 ] ...;
+defSpanType term =: ... [ @term_168 ] ...;
+defSpanType term =: ... [ @term_169 ] ...;
+defSpanType term =: ... [ @term_170 ] ...;
+defSpanType term =: ... [ @term_171 ] ...;
+defSpanType term =: ... [ @term_172 ] ...;
+defSpanType term =: ... [ @term_173 ] ...;
+defSpanType term =: ... [ @term_174 ] ...;
+defSpanType term =: ... [ @term_175 ] ...;
+defSpanType term =: ... [ @term_176 ] ...;
+defSpanType term =: ... [ @term_177 ] ...;
+defSpanType term =: ... [ @term_178 ] ...;
+defSpanType term =: ... [ @term_179 ] ...;
+defSpanType term =: ... [ @term_180 ] ...;
+defSpanType term =: ... [ @term_181 ] ...;
+defSpanType term =: ... [ @term_182 ] ...;
+defSpanType term =: ... [ @term_183 ] ...;
+defSpanType term =: ... [ @term_184 ] ...;
+defSpanType term =: ... [ @term_185 ] ...;
+defSpanType term =: ... [ @term_186 ] ...;
+defSpanType term =: ... [ @term_187 ] ...;
+defSpanType term =: ... [ @term_188 ] ...;
+defSpanType term =: ... [ @term_189 ] ...;
+defSpanType term =: ... [ @term_190 ] ...;
+defSpanType term =: ... [ @term_191 ] ...;
+defSpanType term =: ... [ @term_192 ] ...;
+defSpanType term =: ... [ @term_193 ] ...;
+defSpanType term =: ... [ @term_194 ] ...;
+defSpanType term =: ... [ @term_195 ] ...;
+defSpanType term =: ... [ @term_196 ] ...;
+defSpanType term =: ... [ @term_197 ] ...;
+defSpanType term =: ... [ @term_198 ] ...;
+defSpanType term =: ... [ @term_199 ] ...;
+defSpanType term =: ... [ @term_200 ] ...;
+defSpanType term =: ... [ @term_201 ] ...;
+defSpanType term =: ... [ @term_202 ] ...;
+defSpanType term =: ... [ @term_203 ] ...;
+defSpanType term =: ... [ @term_204 ] ...;
+defSpanType term =: ... [ @term_205 ] ...;
+defSpanType term =: ... [ @term_206 ] ...;
+defSpanType term =: ... [ @term_207 ] ...;
+defSpanType term =: ... [ @term_208 ] ...;
+defSpanType term =: ... [ @term_209 ] ...;
+defSpanType term =: ... [ @term_210 ] ...;
+defSpanType term =: ... [ @term_211 ] ...;
+defSpanType term =: ... [ @term_212 ] ...;
+defSpanType term =: ... [ @term_213 ] ...;
+defSpanType term =: ... [ @term_214 ] ...;
+defSpanType term =: ... [ @term_215 ] ...;
+defSpanType term =: ... [ @term_216 ] ...;
+defSpanType term =: ... [ @term_217 ] ...;
+defSpanType term =: ... [ @term_218 ] ...;
+defSpanType term =: ... [ @term_219 ] ...;
+defSpanType term =: ... [ @term_220 ] ...;
+defSpanType term =: ... [ @term_221 ] ...;
+defSpanType term =: ... [ @term_222 ] ...;
+defSpanType term =: ... [ @term_223 ] ...;
+defSpanType term =: ... [ @term_224 ] ...;
+defSpanType term =: ... [ @term_225 ] ...;
+defSpanType term =: ... [ @term_226 ] ...;
+defSpanType term =: ... [ @term_227 ] ...;
+defSpanType term =: ... [ @term_228 ] ...;
+defSpanType term =: ... [ @term_229 ] ...;
+defSpanType term =: ... [ @term_230 ] ...;
+defSpanType term =: ... [ @term_231 ] ...;
+defSpanType term =: ... [ @term_232 ] ...;
+defSpanType term =: ... [ @term_233 ] ...;
+defSpanType term =: ... [ @term_234 ] ...;
+defSpanType term =: ... [ @term_235 ] ...;
+defSpanType term =: ... [ @term_236 ] ...;
+defSpanType term =: ... [ @term_237 ] ...;
+defSpanType term =: ... [ @term_238 ] ...;
+defSpanType term =: ... [ @term_239 ] ...;
+defSpanType term =: ... [ @term_240 ] ...;
+defSpanType term =: ... [ @term_241 ] ...;
+defSpanType term =: ... [ @term_242 ] ...;
+defSpanType term =: ... [ @term_243 ] ...;
+defSpanType term =: ... [ @term_244 ] ...;
+defSpanType term =: ... [ @term_245 ] ...;
+defSpanType term =: ... [ @term_246 ] ...;
+defSpanType term =: ... [ @term_247 ] ...;
+defSpanType term =: ... [ @term_248 ] ...;
+defSpanType term =: ... [ @term_249 ] ...;
+defSpanType term =: ... [ @term_250 ] ...;
+defSpanType term =: ... [ @term_251 ] ...;
+defSpanType term =: ... [ @term_252 ] ...;
+defSpanType term =: ... [ @term_253 ] ...;
+defSpanType term =: ... [ @term_254 ] ...;
+defSpanType term =: ... [ @term_255 ] ...;
+defSpanType term =: ... [ @term_256 ] ...;
+defSpanType term =: ... [ @term_257 ] ...;
+defSpanType term =: ... [ @term_258 ] ...;
+defSpanType term =: ... [ @term_259 ] ...;
+defSpanType term =: ... [ @term_260 ] ...;
+defSpanType term =: ... [ @term_261 ] ...;
+defSpanType term =: ... [ @term_262 ] ...;
+defSpanType term =: ... [ @term_263 ] ...;
+defSpanType term =: ... [ @term_264 ] ...;
+defSpanType term =: ... [ @term_265 ] ...;
+defSpanType term =: ... [ @term_266 ] ...;
+defSpanType term =: ... [ @term_267 ] ...;
+defSpanType term =: ... [ @term_268 ] ...;
+defSpanType term =: ... [ @term_269 ] ...;
+defSpanType term =: ... [ @term_270 ] ...;
+defSpanType term =: ... [ @term_271 ] ...;
+defSpanType term =: ... [ @term_272 ] ...;
+defSpanType term =: ... [ @term_273 ] ...;
+defSpanType term =: ... [ @term_274 ] ...;
+defSpanType term =: ... [ @term_275 ] ...;
+defSpanType term =: ... [ @term_276 ] ...;
+defSpanType term =: ... [ @term_277 ] ...;
+defSpanType term =: ... [ @term_278 ] ...;
+defSpanType term =: ... [ @term_279 ] ...;
+defSpanType term =: ... [ @term_280 ] ...;
+defSpanType term =: ... [ @term_281 ] ...;
+defSpanType term =: ... [ @term_282 ] ...;
+defSpanType term =: ... [ @term_283 ] ...;
+defSpanType term =: ... [ @term_284 ] ...;
+defSpanType term =: ... [ @term_285 ] ...;
+defSpanType term =: ... [ @term_286 ] ...;
+defSpanType term =: ... [ @term_287 ] ...;
+defSpanType term =: ... [ @term_288 ] ...;
+defSpanType term =: ... [ @term_289 ] ...;
+defSpanType term =: ... [ @term_290 ] ...;
+defSpanType term =: ... [ @term_291 ] ...;
+defSpanType term =: ... [ @term_292 ] ...;
+defSpanType term =: ... [ @term_293 ] ...;
+defSpanType term =: ... [ @term_294 ] ...;
+defSpanType term =: ... [ @term_295 ] ...;
+defSpanType term =: ... [ @term_296 ] ...;
+defSpanType term =: ... [ @term_297 ] ...;
+defSpanType term =: ... [ @term_298 ] ...;
+defSpanType term =: ... [ @term_299 ] ...;
+defSpanType term =: ... [ @term_300 ] ...;
+defSpanType term =: ... [ @term_301 ] ...;
+defSpanType term =: ... [ @term_302 ] ...;
+defSpanType term =: ... [ @term_303 ] ...;
+defSpanType term =: ... [ @term_304 ] ...;
+defSpanType term =: ... [ @term_305 ] ...;
+defSpanType term =: ... [ @term_306 ] ...;
+defSpanType term =: ... [ @term_307 ] ...;
+defSpanType term =: ... [ @term_308 ] ...;
+defSpanType term =: ... [ @term_309 ] ...;
+defSpanType term =: ... [ @term_310 ] ...;
+defSpanType term =: ... [ @term_311 ] ...;
+defSpanType term =: ... [ @term_312 ] ...;
+defSpanType term =: ... [ @term_313 ] ...;
+defSpanType term =: ... [ @term_314 ] ...;
+defSpanType term =: ... [ @term_315 ] ...;
+defSpanType term =: ... [ @term_316 ] ...;
+defSpanType term =: ... [ @term_317 ] ...;
+defSpanType term =: ... [ @term_318 ] ...;
+defSpanType term =: ... [ @term_319 ] ...;
+defSpanType term =: ... [ @term_320 ] ...;
+defSpanType term =: ... [ @term_321 ] ...;
+defSpanType term =: ... [ @term_322 ] ...;
+defSpanType term =: ... [ @term_323 ] ...;
+defSpanType term =: ... [ @term_324 ] ...;
+defSpanType token =term: ... [ any ] ... ;
