@@ -97,6 +97,7 @@ private static String acronyms = "explicit";                  // --- acronym exp
                                                               //     (1) explicit = explicitly defined in text using parentheses, e.g. scientific articles
                                                               //     (2) implicit = frequently used, but not explicitly introduced, e.g. clinical notes
                                                               //     (3) none     = no attempt to expand acronyms
+private static int profiling = 0;
 
 public static void main(String[] args)
 {
@@ -157,18 +158,26 @@ public static void main(String[] args)
     loadDocsRuntime = (loadDocsEndTime-loadDocsStartTime) / 1000.0;
 
     // --- start timing term recognition
-    long startTime, endTime;
-    double runTime;
-    startTime = System.currentTimeMillis();
-    Logger.debug("Start time: " + ((startTime % 86400000) / 3600000 + 1) + ":" + (startTime % 3600000) / 60000 + ":" + (startTime % 60000) / 1000);
+    long startTime = 0;
+    long endTime;
+    double runTime = 0;
 
-    long partStartTime, partEndTime;
+    long partStartTime = 0;
+    long partEndTime = 0;
     double [] partRuntimes = new double[10];
 
+    if(profiling > 0)
+    {
+      startTime = System.currentTimeMillis();
+      Logger.debug("Start time: " + ((startTime % 86400000) / 3600000 + 1) + ":" + (startTime % 3600000) / 60000 + ":" + (startTime % 60000) / 1000);
+    }
+   
 
     // ******************* EXTRACT NOUN PHRASES OF GIVEN STRUCTURE *******************
-
-    partStartTime = System.currentTimeMillis();
+    if(profiling > 0)
+    {	
+       partStartTime = System.currentTimeMillis();
+    }
 
     // --- for each sentence
     query = "SELECT id, tags FROM data_sentence ORDER BY id;";
@@ -265,12 +274,17 @@ public static void main(String[] args)
     }
     rs.close();
 
-    partEndTime = System.currentTimeMillis();
-    partRuntimes[0] = (partEndTime - partStartTime) / 1000.0;
-
+    if(profiling > 0)
+    {
+      partEndTime = System.currentTimeMillis();
+      partRuntimes[0] = (partEndTime - partStartTime) / 1000.0;
+    }
     // ******************* NORMALISE TERM CANDIDATES *******************
 
-//    partStartTime = System.currentTimeMillis();
+    if(profiling > 0)
+    {
+      partStartTime = System.currentTimeMillis();
+    }
 
     // 1 --- remove punctuation, numbers and stop words
     // 2 --- remove any lowercase tokens shorter than 3 characters    LOWER(token) = token AND LENGTH(token) < 3
@@ -376,12 +390,18 @@ public static void main(String[] args)
     }
     rs.close();
 
-//    partEndTime = System.currentTimeMillis();
-//    partRuntimes[1] = (partEndTime - partStartTime) / 1000.0;
+    if(profiling > 0)
+    {
+      partEndTime = System.currentTimeMillis();
+      partRuntimes[1] = (partEndTime - partStartTime) / 1000.0;
+    }
 
     // **************************** PROCESS ACRONYMS ****************************
 
-//    partStartTime = System.currentTimeMillis();
+    if(profiling > 0)
+    {
+      partStartTime = System.currentTimeMillis();
+    }
 
     acronyms = acronyms.toLowerCase();
 
@@ -637,15 +657,21 @@ public static void main(String[] args)
       rs.close();
     }
 
-//    partEndTime = System.currentTimeMillis();
-//    partRuntimes[2] = (partEndTime - partStartTime) / 1000.0;
+    if(profiling > 0)
+    {
+      partEndTime = System.currentTimeMillis();
+      partRuntimes[2] = (partEndTime - partStartTime) / 1000.0;
+    }
 
     // ********************** ENF OF PROCESSING ACRONYMS ***********************
 
 
     // ******************* SELECT NORMALISED TERM CANDIDATES *******************
 
-//    partStartTime = System.currentTimeMillis();
+    if(profiling > 0)
+    {
+      partStartTime = System.currentTimeMillis();
+    }
 
     query = "INSERT INTO term_normalised(normalised)"                   + "\n" +
             "SELECT DISTINCT normalised"                                + "\n" +
@@ -781,12 +807,18 @@ public static void main(String[] args)
       rs.close();
     }
 
-//    partEndTime = System.currentTimeMillis();
-//    partRuntimes[3] = (partEndTime - partStartTime) / 1000.0;
+    if(profiling > 0)
+    {
+      partEndTime = System.currentTimeMillis();
+      partRuntimes[3] = (partEndTime - partStartTime) / 1000.0;
+    }
 
     // ******************* EXPAND TERMS WITH SIMILAR TOKENS *******************
 
-//    partStartTime = System.currentTimeMillis();
+    if(profiling > 0)
+    {
+      partStartTime = System.currentTimeMillis();
+    }
 
     query = "INSERT INTO term_bag(id, token)"      + "\n" +
             "SELECT DISTINCT id, token2"           + "\n" +
@@ -868,11 +900,18 @@ public static void main(String[] args)
     Logger.debug(query);
     stmt.execute(query);
 
-//    partEndTime = System.currentTimeMillis();
-//    partRuntimes[4] = (partEndTime - partStartTime) / 1000.0;
+    if(profiling > 0)
+    {
+      partEndTime = System.currentTimeMillis();
+      partRuntimes[4] = (partEndTime - partStartTime) / 1000.0;
+    }
 
     // ******************* CALCULATE TERMHOOD *******************
-//    partStartTime = System.currentTimeMillis();
+
+    if(profiling > 0)
+    {
+      partStartTime = System.currentTimeMillis();
+    }
 
     query = "INSERT INTO term_termhood(expanded, len, s, nf)\n" +
             "SELECT DISTINCT expanded, len, 0, 0 FROM term_normalised;";
@@ -958,28 +997,40 @@ public static void main(String[] args)
     }
     rs.close();
 
-//    partEndTime = System.currentTimeMillis();
-//    partRuntimes[5] = (partEndTime - partStartTime) / 1000.0;
+    if(profiling > 0)
+    {
+      partEndTime = System.currentTimeMillis();
+      partRuntimes[5] = (partEndTime - partStartTime) / 1000.0;
 
-    // --- stop timing term recogntion
-    endTime = System.currentTimeMillis();
-    runTime = ((endTime - startTime) / 1000.0) ;// 60; // --- run time in minutes
-    //Logger.debug("Term recognition done in " + runTime + " seconds.\n");
+      // --- stop timing term recogntion
+      endTime = System.currentTimeMillis();
+      runTime = ((endTime - startTime) / 1000.0) ;// 60; // --- run time in minutes
+      Logger.debug("Term recognition done in " + runTime + " seconds.\n");
+    }
 
     // --- write results to output files
 
-    export(); // Unai: export doesn't take a lot of compute time
+    export(); 
 
-    long anotStartTime, anotEndTime;
+    long anotStartTime = 0;
+    long anotEndTime;
     double anotRuntime;
-    anotStartTime = System.currentTimeMillis();
+    if(profiling > 0)
+    {
+      anotStartTime = System.currentTimeMillis();
+    }
 
     annotate();
 
-    anotEndTime = System.currentTimeMillis();
-    anotRuntime = (anotEndTime - anotStartTime) / 1000.0;
-    System.err.println("Runtimes (s) : LoadDocuments: "+loadDocsRuntime+", Term recognition: " + runTime + ", Annotate: "+anotRuntime+".\n");
-    System.err.println("Parts: "+partRuntimes[0]+", "+partRuntimes[1]+", "+partRuntimes[2]+", "+partRuntimes[3]+", "+partRuntimes[4]+", "+partRuntimes[5]);
+    if(profiling > 0)
+    {
+      anotEndTime = System.currentTimeMillis();
+      anotRuntime = (anotEndTime - anotStartTime) / 1000.0;
+
+      System.err.println("\nProfiling numbers (s):");
+      System.err.println("LoadDocuments: "+loadDocsRuntime+", Term recognition: " + runTime + ", Annotation: "+anotRuntime+"");
+      System.err.println("Parts of Term Recognition: "+partRuntimes[0]+", "+partRuntimes[1]+", "+partRuntimes[2]+", "+partRuntimes[3]+", "+partRuntimes[4]+", "+partRuntimes[5]);
+    }
 
     con.commit();
     stmt.close();
@@ -1242,6 +1293,18 @@ private static void loadSettings(String file)
               Logger.debug("Using default: acronyms = " + acronyms);
             }
           }
+	  else if(parameter.equals("profiling"))
+	  {
+            try
+            {
+              profiling = Integer.parseInt(value);
+            }
+            catch(Exception e)
+            {
+              Logger.debug("Invalid profiling value: " + value);
+              Logger.debug("Using default: profiling = " + profiling);
+            }
+ 	  }
           else Logger.debug("Invalid line: " + line);
         }
         else Logger.debug("Invalid line: " + line);
