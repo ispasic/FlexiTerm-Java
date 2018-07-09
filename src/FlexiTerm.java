@@ -73,6 +73,20 @@ import com.swabunga.spell.event.StringWordTokenizer;
 // --- import TinyLogger
 import org.pmw.tinylog.Logger;
 
+// --- import MinorThird classes
+import edu.cmu.minorthird.text.mixup.Mixup;
+import edu.cmu.minorthird.text.mixup.MixupInterpreter;
+import edu.cmu.minorthird.text.mixup.MixupProgram;
+
+import edu.cmu.minorthird.text.NestedTextLabels;
+import edu.cmu.minorthird.text.TextLabels;
+import edu.cmu.minorthird.text.TextLabelsLoader;
+import edu.cmu.minorthird.util.CommandLineProcessor;
+import edu.cmu.minorthird.ui.CommandLineUtil;
+import edu.cmu.minorthird.util.JointCommandLineProcessor;
+
+
+
 public class FlexiTerm {
 
 // --- (global) database connection variables ---
@@ -1840,28 +1854,49 @@ public static void annotate() throws Exception
   File input = new File("../text");
   if (input.isDirectory())
   {
-    // --- run output.mixup
+    // --- Call MinorThird library to perform MixUp
 
-    //long anotStartTime, anotEndTime;
-    //double anotRuntime;
-    //anotStartTime = System.currentTimeMillis();
+    //Prepare MixUp args
+    String[] mixup_args = new String[6];
+    mixup_args[0] = "-labels";
+    mixup_args[1] = "../text";
+    mixup_args[2] = "-mixup"; 
+    mixup_args[3] = "../out/output.mixup";
+    mixup_args[4] = "-saveAs";
+    mixup_args[5] = "../out/text.labels";
 
-    String mixupCall = "java -Xmx1200M -cp ../lib/m3rd_20080611.jar edu.cmu.minorthird.ui.RunMixup -labels ../text -mixup ../out/output.mixup -saveAs " + labels;
-    Logger.debug("Executing: " + mixupCall);
-    Runtime rt = Runtime.getRuntime();
-    Process process = rt.exec(mixupCall);
-    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-    while ((reader.readLine()) != null) {}
-    process.waitFor();
-    reader.close();
+    CommandLineUtil.GUIParams gui=new CommandLineUtil.GUIParams();
+    CommandLineUtil.BaseParams base=new CommandLineUtil.BaseParams();
+    CommandLineUtil.SaveParams save=new CommandLineUtil.SaveParams();
+    CommandLineUtil.MixupParams mixup=new CommandLineUtil.MixupParams();
+    CommandLineUtil.AnnotatorOutputParams output_mixup = new CommandLineUtil.AnnotatorOutputParams();
+    CommandLineProcessor clp = new JointCommandLineProcessor(new CommandLineProcessor[]{gui,base,save,mixup,output_mixup});
+    clp.processArguments(mixup_args);
 
-    //anotEndTime = System.currentTimeMillis();
-    //anotRuntime = (anotEndTime - anotStartTime) / 1000.0;
-    //System.err.println("Annotate external java runtime (s): "+anotRuntime+".\n");
+    // Load mixup program
+    MixupProgram program=null;
+    try{
+	program=new MixupProgram(new File(mixup.fileName));
+    }catch(Mixup.ParseException ex){
+		System.out.println("can't parse file "+mixup.fileName+": "+ex);
+    }catch(IOException ex){
+		System.out.println("can't load file "+mixup.fileName+": "+ex);
+    }
 
+    if(program==null){
+	Logger.debug("Cannot runMixup unless a valid mixup program is specified.");
+	return;
+    }
+
+    // Run Mixup
+    MixupInterpreter interpreter=new MixupInterpreter(program);
+    TextLabels annotatedLabels=new NestedTextLabels(base.labels);
+    interpreter.eval((NestedTextLabels)annotatedLabels);
 
     // --- import mixup labels into database: output_label
-    BufferedReader br = new BufferedReader(new FileReader(labels));
+    BufferedReader br = new BufferedReader(new StringReader(
+	 new TextLabelsLoader().printTypesAsOps(annotatedLabels)));
+
     String line;
     while ((line = br.readLine()) != null)
     {
