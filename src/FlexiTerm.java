@@ -223,8 +223,7 @@ public static void main(String[] args)
                   "WHERE  sentence_id = '" + sentence_id + "'"                                                       + "\n" +
                   "AND    position = " + start                                                                       + "\n" +
                   "AND    (token LIKE '%-%-%' OR token LIKE 'unit%' or token LIKE 'area%' or token LIKE 'history'"   + "\n" +
-                  "OR     (lower_token IN (SELECT word FROM stopword)));";
-                  //"OR     (LOWER(token) IN (SELECT LOWER(word) FROM stopword)));";
+                  "OR     (lower_token IN (SELECT LOWER(word) FROM stopword)));";
           Logger.debug(query);
           rs1 = stmt1.executeQuery(query);
           if (rs1.next())
