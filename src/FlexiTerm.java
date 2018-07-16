@@ -153,6 +153,9 @@ public static void main(String[] args)
     query = "CREATE TABLE tmp_acronym (acronym TEXT NOT NULL check(typeof(acronym) = 'text') , definition TEXT check(typeof(definition) = 'text') );"; stmt.execute(query);
     query = "CREATE TABLE tmp_normalised ( changefrom TEXT NOT NULL, changeto TEXT NOT NULL );"; stmt.execute(query);
 
+    //Temporary tables
+    query = "CREATE TABLE data_token_position ( lower_token VARCHAR(30), position INT);"; stmt.execute(query);
+    query = "CREATE TABLE data_token_ordered ( token VARCHAR(30), position INT);"; stmt.execute(query);
 
     // --- import stoplist
     loadStoplist(stoplist);
@@ -197,14 +200,36 @@ public static void main(String[] args)
     query = "SELECT id, tags FROM data_sentence ORDER BY id;";
     Logger.debug(query);
     rs = stmt.executeQuery(query);
+
+    // --- NP pattern filter - default: "(((((NN|JJ) )*NN) IN (((NN|JJ) )*NN))|((NN|JJ )*NN POS (NN|JJ )*NN))|(((NN|JJ) )+NN)"
+    Pattern r = Pattern.compile(pattern);
+
     while (rs.next())
     {
       String sentence_id = rs.getString(1);  // --- sentence id
       String tags        = rs.getString(2);  // --- sentence tag pattern
 
-      // --- NP pattern filter - default: "(((((NN|JJ) )*NN) IN (((NN|JJ) )*NN))|((NN|JJ )*NN POS (NN|JJ )*NN))|(((NN|JJ) )+NN)"
-      Pattern r = Pattern.compile(pattern);
       Matcher m = r.matcher(tags);
+
+      //Fill 'data_token_position' table
+      query = "INSERT INTO data_token_position (lower_token, position) "                                        + "\n" +
+              "SELECT lower_token, position"                                                                     + "\n" +
+              "FROM   data_token"                                                                                + "\n" +
+              "WHERE  sentence_id = '" + sentence_id + "'"                                                       + "\n" +
+              "AND    (token LIKE '%-%-%' OR token LIKE 'unit%' or token LIKE 'area%' or token LIKE 'history'"   + "\n" +
+              "OR     (lower_token IN (SELECT LOWER(word) FROM stopword)));";
+      Logger.debug(query);
+      stmt1.execute(query);
+
+      query = "INSERT INTO data_token_ordered (token, position) "                                        + "\n" +
+              "SELECT token, position"                          + "\n" +
+              "FROM   data_token"                               + "\n" +           
+              "WHERE  sentence_id = '" + sentence_id + "'"      + "\n" + 
+              "ORDER BY position ASC;";
+
+      Logger.debug(query);
+      stmt1.execute(query);
+
 
       // --- for each matching chunk
       while(m.find())
@@ -215,22 +240,25 @@ public static void main(String[] args)
         int start  = whitespaces(pre)   + 1;        // --- start token position
         int length = whitespaces(chunk) + 1;        // --- chunk length in tokens
 
+
         // --- trim leading stop words
         while (length > 1)
         {
-          query = "SELECT lower_token"                                                                              + "\n" +
-                  "FROM   data_token"                                                                                + "\n" +
-                  "WHERE  sentence_id = '" + sentence_id + "'"                                                       + "\n" +
-                  "AND    position = " + start                                                                       + "\n" +
-                  "AND    (token LIKE '%-%-%' OR token LIKE 'unit%' or token LIKE 'area%' or token LIKE 'history'"   + "\n" +
-                  "OR     (lower_token IN (SELECT LOWER(word) FROM stopword)));";
+
+	  //Get tokens in lowercase
+          query = "SELECT lower_token"                                                                      + "\n" +
+                  "FROM   data_token_position"                                                              + "\n" +
+                  "WHERE  position = " + start;  							     
+
           Logger.debug(query);
           rs1 = stmt1.executeQuery(query);
+
           if (rs1.next())
           {
             String stopword = rs1.getString(1);
             start++;
             length--;
+
           }
           else break;
           rs1.close();
@@ -239,13 +267,17 @@ public static void main(String[] args)
         // --- trim trailing stop words
         while (length > 1)
         {
+
           query = "SELECT T.lower_token"                                                   + "\n" +
                   "FROM   data_token T, stopword S"                                         + "\n" +
                   "WHERE  sentence_id = '" + sentence_id + "'"                              + "\n" +
                   "AND    position = " + (start + length - 1)                               + "\n" +
-                  "AND    (T.lower_token = LOWER(S.word) OR T.gtag = 'JJ');";
+                  "AND    (T.lower_token = LOWER(S.word) OR T.gtag = 'JJ');"; 
+
           Logger.debug(query);
           rs1 = stmt1.executeQuery(query);
+
+
           if (rs1.next())
           {
             String stopword = rs1.getString(1);
@@ -260,15 +292,16 @@ public static void main(String[] args)
           String phrase_id = sentence_id + "." + start;
 
           String phrase = "";
-          query = "SELECT position, token"                          + "\n" +
-                  "FROM   data_token"                               + "\n" +
-                  "WHERE  sentence_id = '" + sentence_id + "'"      + "\n" +
-                  "AND    " + start + " <= position"                + "\n" +
-                  "AND    position < " + (start + length)           + "\n" +
-                  "ORDER BY position ASC;";
+
+	  query = "SELECT position, token"                          + "\n" +
+		  "FROM data_token_ordered"                         + "\n" +
+		  "WHERE " + start + " <= position"                + "\n" +
+                  "AND    position < " + (start + length); 
+
           Logger.debug(query);
           rs1 = stmt1.executeQuery(query);
-          while (rs1.next()) phrase += " " + rs1.getString(2);
+          
+	  while (rs1.next()) phrase += " " + rs1.getString(2);
           phrase = phrase.substring(1);
           int last = phrase.length() - 1;
           if (phrase.charAt(last) == '.') phrase = phrase.substring(0, last);
@@ -284,6 +317,17 @@ public static void main(String[] args)
           }
         }
       }
+
+      //Empty temporary tables for next iteration
+
+      query = "DELETE FROM data_token_position;";
+      Logger.debug(query);
+      stmt1.execute(query);
+
+      query = "DELETE FROM data_token_ordered;";
+      Logger.debug(query);
+      stmt1.execute(query);
+
     }
     rs.close();
 
@@ -306,6 +350,7 @@ public static void main(String[] args)
     query = "SELECT id, sentence_id, token_start, token_length FROM term_phrase;";
     Logger.debug(query);
     rs = stmt.executeQuery(query);
+
     while (rs.next())
     {
       String phrase_id   = rs.getString(1);
@@ -314,6 +359,7 @@ public static void main(String[] args)
       int    length      = rs.getInt(4);
 
       String normalised = "";
+
       query = "SELECT DISTINCT LOWER(stem)"                            + "\n" +
               "FROM   data_token"                                      + "\n" +
               "WHERE  sentence_id = '" + sentence_id + "'"             + "\n" +
@@ -322,8 +368,10 @@ public static void main(String[] args)
               "AND NOT (LOWER(token) = token AND LENGTH(token) < 3)"   + "\n" +
               "EXCEPT SELECT word FROM stopword"                       + "\n" +
               "ORDER BY LOWER(stem) ASC;";
+
       Logger.debug(query);
       rs1 = stmt1.executeQuery(query);
+
       while (rs1.next()) normalised += " " + rs1.getString(1);
       if (normalised.length() > 0) normalised = normalised.substring(1);
       normalised = normalised.replaceAll("\\.", "");   // --- e.g. U.K., Dr., St. -> UK, Dr, St
@@ -1046,7 +1094,6 @@ public static void main(String[] args)
     }
 
     con.commit();
-    stmt.close();
     stmt1.close();
 
     close();  // --- SQLite database connection
