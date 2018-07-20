@@ -157,6 +157,11 @@ public static void main(String[] args)
     query = "CREATE TABLE data_token_position ( lower_token VARCHAR(30), position INT);"; stmt.execute(query);
     query = "CREATE TABLE data_token_ordered ( token VARCHAR(30), position INT);"; stmt.execute(query);
 
+    //Create indexes 
+    query = "CREATE INDEX word_index ON stopword (word);"; stmt.execute(query);
+    query = "CREATE INDEX lower_token_index ON data_token (sentence_id,position);"; stmt.execute(query);
+    query = "CREATE INDEX term_bag_index ON term_bag (token,id);"; stmt.execute(query);
+ 
     // --- import stoplist
     loadStoplist(stoplist);
 
