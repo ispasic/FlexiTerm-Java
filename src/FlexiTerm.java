@@ -161,6 +161,7 @@ public static void main(String[] args)
     query = "CREATE INDEX word_index ON stopword (word);"; stmt.execute(query);
     query = "CREATE INDEX lower_token_index ON data_token (sentence_id,position);"; stmt.execute(query);
     query = "CREATE INDEX term_bag_index ON term_bag (token,id);"; stmt.execute(query);
+    query = "CREATE INDEX phrase_index ON term_phrase (phrase);"; stmt.execute(query);
  
     // --- import stoplist
     loadStoplist(stoplist);
@@ -486,11 +487,13 @@ public static void main(String[] args)
       //     ... blah blah ( blah blah ) blah blah ...
       //     NOTE: ( and ) have been replaced by -LRB- and -RRB- during POS tagging,
       //     so revert back to ( and ) to be able to run the Schwartz & Hearst algorithm
+
       query = "SELECT REPLACE(REPLACE(sentence, '-LRB- ', '('), ' -RRB-', ')')"    + "\n" +
               "FROM   data_sentence"                                               + "\n" +
               "WHERE  sentence LIKE '%-LRB- % -RRB-%';"                            + "\n";
       Logger.debug(query);
       rs = stmt.executeQuery(query);
+
       while (rs.next())
       {
         String sentence = rs.getString(1);
@@ -525,6 +528,7 @@ public static void main(String[] args)
               "AND    LOWER(SUBSTR(acronym, 2)) = SUBSTR(acronym, 2);"    + "\n";
       Logger.debug(query);
       stmt.execute(query);
+
     }
     else if (acronyms.equals("implicit"))
     {
@@ -586,6 +590,7 @@ public static void main(String[] args)
     // --- normalise acronyms as term candidates or part of other term candidates
     if (acronyms.equals("explicit") || acronyms.equals("implicit"))
     {
+
       // --- we want to have 1-to-1 mapping, so are looking to remove 
       //     less likely expanded forms
 
@@ -673,6 +678,7 @@ public static void main(String[] args)
       query = "SELECT changefrom, changeto FROM tmp_normalised;";
       Logger.debug(query);
       rs = stmt.executeQuery(query);
+
       while (rs.next())
       {
         String changefrom = rs.getString(1);
@@ -710,6 +716,7 @@ public static void main(String[] args)
       query = "SELECT changefrom, changeto FROM tmp_normalised;";
       Logger.debug(query);
       rs = stmt.executeQuery(query);
+
       while (rs.next())
       {
         String changefrom = rs.getString(1);
