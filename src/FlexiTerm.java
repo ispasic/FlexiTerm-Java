@@ -139,7 +139,9 @@ public static void main(String[] args)
     query = "CREATE TABLE term_normalised ( normalised TEXT, expanded TEXT, len INT, PRIMARY KEY(normalised) );"; stmt.execute(query);
     query = "CREATE TABLE term_nested_aux ( parent int, child int, PRIMARY KEY(parent, child), FOREIGN KEY(parent) REFERENCES term_normalised(rowid), FOREIGN KEY(child) REFERENCES term_normalised(rowid) );"; stmt.execute(query);
     query = "CREATE TABLE term_nested ( parent TEXT, child TEXT, PRIMARY KEY(parent, child) );"; stmt.execute(query);
+    
     query = "CREATE TABLE term_phrase ( id VARCHAR(60), sentence_id VARCHAR(50), token_start INT, token_length INT, phrase TEXT, normalised TEXT, PRIMARY KEY(id), FOREIGN KEY (sentence_id) REFERENCES data_sentence(id) );"; stmt.execute(query);
+    query = "CREATE TABLE term_phrase_temp (normalised TEXT, phrase TEXT, lower_char_phrase TEXT, length_phrase INT, lower_ns_phrase TEXT);"; stmt.execute(query);
     query = "CREATE TABLE term_termhood (expanded TEXT PRIMARY KEY ,representative TEXT,len INT, f INT,\"s\" INT,\"nf\" INT,\"c\" REAL DEFAULT (null) );"; stmt.execute(query);
     query = "CREATE TABLE token ( token VARCHAR(30), PRIMARY KEY(token) );"; stmt.execute(query);
     query = "CREATE TABLE token_similarity ( token1 VARCHAR(30), token2 VARCHAR(30), PRIMARY KEY(token1, token2), FOREIGN KEY (token1) REFERENCES token(token), FOREIGN KEY (token2) REFERENCES token(token) );"; stmt.execute(query);
@@ -162,7 +164,7 @@ public static void main(String[] args)
     query = "CREATE INDEX lower_token_index ON data_token (sentence_id,position);"; stmt.execute(query);
     query = "CREATE INDEX term_bag_index ON term_bag (token,id);"; stmt.execute(query);
     query = "CREATE INDEX phrase_index ON term_phrase (phrase);"; stmt.execute(query);
- 
+
     // --- import stoplist
     loadStoplist(stoplist);
 
@@ -353,6 +355,7 @@ public static void main(String[] args)
     // 2 --- remove any lowercase tokens shorter than 3 characters    LOWER(token) = token AND LENGTH(token) < 3
     // 3 --- stem & lowercase each remaining token                    SELECT LOWER(stem)
     // 4 --- sort tokens alphabetically
+
     query = "SELECT id, sentence_id, token_start, token_length FROM term_phrase;";
     Logger.debug(query);
     rs = stmt.executeQuery(query);
@@ -392,21 +395,26 @@ public static void main(String[] args)
     }
     rs.close();
 
-
     // --- re-normalise term candidates that have different TOKENISATION,
     //     e.g. NF-kappa B vs. NF-kappaB
     //     or   nuclear factor-kappa B vs. nuclear factor-kappaB
     // --- keep the one with FEWER tokens (e.g. NF-kappaB)
     // --- this choice is better when expanding acronyms later on
+
+    query = "INSERT INTO term_phrase_temp(normalised, phrase, lower_char_phrase, length_phrase, lower_ns_phrase)"     + "\n" +
+	    "SELECT normalised, phrase, LOWER(SUBSTR(phrase, 1, 1)), LENGTH(phrase), LOWER(REPLACE(phrase, ' ', ''))" + "\n" +
+            "FROM term_phrase"; stmt.execute(query);
+
     query = "DELETE FROM tmp_normalised;"; stmt.execute(query);
 
     query = "INSERT INTO tmp_normalised(changefrom, changeto)"                                  + "\n" +
             "SELECT DISTINCT P1.normalised, P2.normalised"                                      + "\n" +
-            "FROM   term_phrase P1, term_phrase P2"                                             + "\n" +
+            "FROM   term_phrase_temp P1, term_phrase_temp P2"                                   + "\n" +
             "WHERE  P1.phrase LIKE '% %'"                                                       + "\n" +
-            "AND    LOWER(SUBSTR(P1.phrase, 1, 1)) = LOWER(SUBSTR(P2.phrase, 1, 1))"            + "\n" +
-            "AND    LENGTH(P1.phrase) > LENGTH(P2.phrase)"                                      + "\n" +
-            "AND    LOWER(REPLACE(P1.phrase, ' ', '')) = LOWER(REPLACE(P2.phrase, ' ', ''));"   + "\n";
+            "AND    P1.lower_char_phrase = P2.lower_char_phrase"                                + "\n" +
+            "AND    P1.length_phrase > P2.length_phrase"                                        + "\n" +
+            "AND    P1.lower_ns_phrase = P2.lower_ns_phrase"   + "\n";
+
     Logger.debug(query);
     stmt.execute(query);
 
@@ -425,22 +433,28 @@ public static void main(String[] args)
     }
     rs.close();
 
-
     // --- re-normalise term candidates that have different HYPHENATION,
     //     e.g. nuclear factor-kappa B vs. nuclear factor kappa B
     //     or   NF-kappa B vs. NF kappa B
     // --- keep the HYPHENATED form
     // --- this means FEWER tokens, so consistent with the above
+
+    query = "DELETE FROM term_phrase_temp;"; stmt.execute(query);
+
+    query = "INSERT INTO term_phrase_temp(normalised, phrase, lower_char_phrase, length_phrase, lower_ns_phrase)"     + "\n" +
+	    "SELECT normalised, phrase, LOWER(SUBSTR(phrase, 1, 1)), LENGTH(phrase), LOWER(phrase)" + "\n" +
+            "FROM term_phrase"; stmt.execute(query);
+
     query = "DELETE FROM tmp_normalised;"; stmt.execute(query);
 
     query = "INSERT INTO tmp_normalised(changefrom, changeto)"                             + "\n" +
             "SELECT P2.normalised, P1.normalised"                                          + "\n" +
-            "FROM   term_phrase P1, term_phrase P2"                                        + "\n" +
+            "FROM   term_phrase_temp P1, term_phrase_temp P2"                              + "\n" +
             "WHERE  P1.phrase LIKE '%-%'"                                                  + "\n" +
-            "AND    LOWER(SUBSTR(P1.phrase,1,1)) = LOWER(SUBSTR(P2.phrase,1,1))"           + "\n" +
-            "AND    LENGTH(P1.phrase) = LENGTH(P2.phrase)"                                 + "\n" +
-            "AND    LOWER(REPLACE(P1.phrase, '-', ' ')) = LOWER(P2.phrase);"               + "\n";
-    stmt.execute(query);
+            "AND    P1.lower_char_phrase = P2.lower_char_phrase"                           + "\n" +
+            "AND    P1.length_phrase = P2.length_phrase"                                   + "\n" +
+            "AND    REPLACE(P1.lower_ns_phrase, '-', ' ') = P2.lower_ns_phrase;"           + "\n";
+    stmt.execute(query); 
 
     query = "SELECT changefrom, changeto FROM tmp_normalised;";
     Logger.debug(query);
