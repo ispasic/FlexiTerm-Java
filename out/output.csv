@@ -1,325 +1,305 @@
 Rank,Term representative,Score,Frequency
-1,"TNF-alpha",85.3201,63
-2,"tumor necrosis factor",75.2346,71
-3,"t cells",68.5225,100
-4,"nf-kappa b",50.2301,74
-5,"transcription factor",48.4236,71
-6,"gene expression",27.6232,41
-7,"activation of nf-kappa b",27.3084,26
-8,"protein kinase",23.5262,36
-9,"glucocorticoid receptor",23.4515,35
-10,"human cells",22.8045,34
-11,"CBF",22.7962,22
-12,"transcriptional activity",22.1807,33
-13,"RA",21.1410,32
-14,"GM-CSF",20.8736,20
-15,"electrophoretic mobility shift assays",20.7944,16
+1,"TNF-alpha",85.0261,63
+2,"tumor necrosis factor",74.7534,71
+3,"nf-kappa b",52.9267,78
+4,"transcription factor",48.3744,71
+5,"gene expression",27.6150,41
+6,"activation of nf-kappa b",27.0991,26
+7,"glucocorticoid receptors",23.5262,35
+8,"protein kinase",23.3360,36
+9,"human t cells",22.8261,34
+10,"CBF",22.7962,22
+11,"transcriptional activity",22.1807,33
+12,"RA",21.0077,32
+13,"GM-CSF",20.8736,20
+14,"electrophoretic mobility shift assays",20.7944,16
+15,"cell lines",19.4081,29
 16,"human monocytes",19.1528,29
-17,"cell lines",18.7150,28
-18,"HIV",17.0895,17
-19,"binding factors",16.9388,26
-20,"protein tyrosine kinase",15.9299,16
-21,"peripheral blood",15.6189,24
-22,"PKC",15.3806,15
-22,"PMA",15.3806,15
-23,"t lymphocyte",13.8244,21
-24,"tyrosine kinase",13.7936,22
-25,"activator protein",13.0774,20
-26,"monocytic cells",12.4766,19
-26,"b cells",12.4766,19
-27,"tyrosine phosphorylation",12.3506,19
-28,"ICAM-1",11.9278,12
-29,"RAR",11.4256,12
-30,"signal transducer",11.0904,17
-31,"cell activation",11.0441,17
-32,"ER",10.9517,17
-33,"nuclear factor",10.8593,17
-34,"cbf alpha",10.8131,9
-35,"erythroid cells",10.2239,16
-36,"human t cells",9.7306,10
-37,"tnf-alpha release in human monocytes",9.7296,5
-38,"gene transcription",9.7041,15
-39,"tnf mrna",9.6566,7
-39,"tnf-alpha release",9.6566,9
-40,"binding site",9.5060,15
-41,"RXR",9.4481,10
-42,"PBL",8.7889,9
-42,"PBMo",8.7889,9
-43,"CsA",8.7799,14
-44,"cell cycle",8.1791,13
-45,"kappa b",8.0867,13
-46,"TF",8.0207,13
-47,"jurkat cells",7.6246,12
-48,"EBV",7.5091,12
-49,"endothelial cells",7.4860,12
-50,"activation of protein kinases",7.2508,8
-51,"nuclear extracts",6.9315,11
-51,"MDHM",6.9315,6
-51,"t-cell activation",6.9315,11
-51,"binding activity",6.9315,11
-51,"lps-induced nf-kappab activation",6.9315,6
-52,"regulatory elements",6.8545,11
-53,"b lymphocytes",6.8325,11
-54,"IFN-gamma",6.7582,11
-55,"ERK",6.5917,7
-56,"retinoic acid receptor alpha",6.2383,6
-56,"response element",6.2383,11
-57,"CKII",6.2255,7
-58,"transcriptional regulator",6.1517,10
-59,"CTL",6.0650,10
-60,"myristate acetate",5.8918,16
-61,"t-cell lines",5.5452,9
-61,"cbf beta",5.5452,5
-61,"ICER",5.5452,5
-61,"protein tyrosine kinase activity",5.5452,5
-61,"NRDS",5.5452,4
-61,"hiv type",5.5452,5
-62,"nuclear nf-kappa b",5.4931,6
-62,"nf-kappa b protein",5.4931,6
-62,"activation of transcription factors",5.4931,6
-62,"ATRA",5.4931,6
-62,"CD28RE",5.4931,5
-63,"human t lymphocytes",5.2184,6
-64,"il-2 production",4.8520,8
-64,"cell surface",4.8520,8
-64,"lytic cycle",4.8520,8
-65,"CAT",4.7134,8
-66,"promoter activity",4.5748,8
-67,"gene in t cells",4.3944,5
-67,"t cell responses",4.3944,5
-67,"TCC",4.3944,5
-67,"cepsilon germline transcripts",4.3944,5
-67,"b transcription factors",4.3944,5
-67,"erythroid-specific gene expression",4.3944,4
-67,"monocytic thp-1 cells",4.3944,5
-67,"IHES",4.3944,4
-68,"tcf-1 alpha binding site",4.1589,3
-68,"activation of genes",4.1589,7
-68,"globin promoter",4.1589,7
-68,"il-2 receptor",4.1589,7
-68,"family of proteins",4.1589,7
-68,"transcription factor nf-kappab",4.1589,4
-68,"mrna levels",4.1589,7
-68,"cells in response",4.1589,7
-68,"coproporphyrinogen oxidase",4.1589,7
-69,"tnf-alpha production",4.0236,4
-70,"differentiated cells",4.0203,7
-71,"inhibitor protein",3.9856,7
-71,"epithelial cells",3.9856,7
-72,"nf-kappab dna",3.8451,5
-73,"lps-induced activity",3.8123,7
-74,"tnf mrna accumulation",3.5835,3
-75,"u937 cells",3.4657,6
-75,"cushing 's disease",3.4657,6
-75,"surface expression",3.4657,6
-75,"thp-1 cells",3.4657,6
-75,"il-1 beta",3.4657,6
-75,"cell adhesion",3.4657,6
-75,"stat proteins",3.4657,6
-75,"p elements",3.4657,6
-75,"cytokine genes",3.4657,6
-75,"nuclear proteins",3.4657,6
-75,"induction of expression",3.4657,6
-75,"il-2 promoter",3.4657,6
-75,"p-like elements",3.4657,5
-75,"immune system",3.4657,6
-75,"PGE2",3.4657,6
-75,"gene induction",3.4657,6
-75,"functions of cells",3.4657,6
-76,"tcr alpha enhancer",3.2958,4
-76,"polymerase chain reaction",3.2958,3
-76,"kappa b enhancer",3.2958,4
-76,"number of glucocorticoid receptors",3.2958,3
-76,"kappa b-like site",3.2958,4
-76,"tf gene",3.2958,4
-76,"tf site",3.2958,4
-76,"syk tyrosine kinase",3.2958,3
-76,"gamma response region",3.2958,4
-76,"acute promyelocytic leukemia",3.2958,4
-76,"ifn-gamma production",3.2958,4
-76,"dna binding activity",3.2958,4
-76,"il-1beta promoter activity",3.2958,3
-76,"erythroid cell survival",3.2958,3
-76,"bronchial epithelial cells",3.2958,4
-76,"serine phosphorylation of stat3",3.2958,3
-76,"human monocytic cells",3.2958,4
-77,"nuclear translocation",3.2924,6
-77,"transient expression",3.2924,6
-78,"hiv-1 replication",3.2347,6
-78,"il-9 gene",3.2347,6
-79,"cbf alpha subunit",3.2189,3
-80,"tcf-1 alpha",3.0036,6
-80,"blood cells",3.0036,6
-81,"phorbol ester",2.7726,4
-81,"cell type",2.7726,5
-81,"AD",2.7726,5
-81,"enhanced activity",2.7726,5
-81,"immune response",2.7726,5
-81,"activity of dna",2.7726,5
-81,"nuclear compartment",2.7726,5
-81,"nonerythroid cells",2.7726,5
-81,"human peripheral blood monocytes",2.7726,3
-81,"monocytic thp-1 cell line",2.7726,3
-81,"nuclear complex",2.7726,5
-81,"alpha b",2.7726,5
-81,"high levels",2.7726,5
-81,"inhibitory effect",2.7726,5
-81,"t cells of elderly individuals",2.7726,3
-81,"expression of il-2",2.7726,5
-81,"critical role",2.7726,5
-81,"myeloid cells",2.7726,5
-81,"embryonic-fetal liver",2.7726,5
-81,"activity of lymphocytes",2.7726,5
-81,"activation of human t cells",2.7726,3
-81,"family members",2.7726,5
-81,"human leukemias",2.7726,5
-81,"PDTC",2.7726,5
-81,"binding proteins",2.7726,5
-81,"lps-induced nf-kappab dna",2.7726,3
-81,"MS",2.7726,5
-81,"neutrophil maturation",2.7726,5
-82,"cat reporter",2.7465,4
-83,"reporter gene",2.5415,5
-84,"beta interferon promoter",2.1972,3
-84,"human mononuclear cells",2.1972,3
-84,"androgen receptor gene",2.1972,3
-84,"specific nuclear translocation",2.1972,3
-84,"new transcription factor",2.1972,3
-84,"ap-1 transcription factor",2.1972,3
-84,"phospholipase c gamma",2.1972,3
-84,"ebv sm",2.1972,3
-84,"transcription in t cells",2.1972,3
-84,"50-kda nf-kappa b",2.1972,3
-84,"regulation of gene expression",2.1972,3
-84,"dna binding specificities",2.1972,3
-84,"rna polymerase ii",2.1972,3
-84,"lower molecular weight",2.1972,3
-84,"expression of cd40 antigen",2.1972,3
-84,"hematopoietic growth factor",2.1972,3
-84,"nf-kappa b level",2.1972,3
-84,"kappa light chain",2.1972,3
-84,"nf-kappab inhibitors",2.1972,3
-84,"gata-1 and-binding proteins",2.1972,3
-84,"fetal blood cells",2.1972,4
-84,"dna binding motif",2.1972,3
-84,"cord blood lymphocytes",2.1972,3
-84,"erythroid cell development",2.1972,3
-84,"lytic cycle genes",2.1972,3
-84,"FISH",2.1972,3
-84,"gr in lymphocytes",2.1972,3
-84,"normal human monocytes",2.1972,3
-84,"murine t cells",2.1972,3
-84,"role of retinoic acid",2.1972,3
-85,"normal cells",2.0794,4
-85,"viral production",2.0794,4
-85,"receptor alpha chain",2.0794,3
-85,"number of receptors",2.0794,5
-85,"zinc fingers",2.0794,4
-85,"globin gene",2.0794,4
-85,"site-directed mutagenesis",2.0794,3
-85,"cell receptor",2.0794,4
-85,"cellular proliferation",2.0794,3
-85,"rel proteins",2.0794,4
-85,"ltr activation",2.0794,4
-85,"monocyte adhesion",2.0794,4
-85,"immediate-early genes",2.0794,4
-85,"lps response",2.0794,4
-85,"physical linkage",2.0794,3
-85,"il-4 promoter",2.0794,4
-85,"important role",2.0794,4
-85,"cell cultures",2.0794,4
-85,"levels of il-2",2.0794,4
-85,"activation of ap-1",2.0794,4
-85,"activation of nf-at",2.0794,4
-85,"higher levels",2.0794,4
-85,"cytokine production",2.0794,3
-85,"il-4 receptor",2.0794,3
-85,"94-kd stat5a",2.0794,3
-85,"transient transfection",2.0794,4
-85,"cd40 antigen",2.0794,4
-85,"present study",2.0794,3
-85,"inflammatory response",2.0794,4
-85,"il-4ralpha chain",2.0794,3
-85,"amino acids",2.0794,4
-85,"specific complex",2.0794,4
-85,"plc gamma",2.0794,4
-85,"nf-kappa b1",2.0794,4
-85,"tolerant cells",2.0794,4
-85,"lai ltr",2.0794,3
-85,"dose-dependent manner",2.0794,3
-85,"environmental estrogens",2.0794,4
-85,"sodium salicylate",2.0794,3
-85,"SE",2.0794,4
-85,"stat3 activation",2.0794,4
-85,"monocyte apoptosis",2.0794,4
-85,"induction of apoptosis",2.0794,3
-86,"specific translocation",1.7329,4
-86,"situ hybridization",1.7329,4
-86,"il-13 gene",1.7329,4
-87,"icam-1 kappa b",1.6094,3
-88,"cell population",1.3863,3
-88,"jurkat t",1.3863,3
-88,"mononuclear leukocytes",1.3863,3
-88,"hela cells",1.3863,3
-88,"alpha activity",1.3863,3
-88,"receptor levels",1.3863,3
-88,"hl60 cells",1.3863,3
-88,"hypertensive patients",1.3863,3
-88,"k562 cells",1.3863,3
-88,"cell proliferation",1.3863,3
-88,"pathways t",1.3863,3
-88,"transient pseudohypoaldosteronism",1.3863,3
-88,"aldosterone receptors",1.3863,3
-88,"protein level",1.3863,3
-88,"primary cells",1.3863,3
-88,"p50 homodimer",1.3863,3
-88,"complex in response",1.3863,3
-88,"sm protein",1.3863,3
-88,"pebp2 alpha",1.3863,3
-88,"dna binding subunit",1.3863,3
-88,"induction of vcam-1",1.3863,3
-88,"tyrosine kinase inhibitors genistein",1.3863,3
-88,"steroid hormone",1.3863,3
-88,"24,25-dihydroxyvitamin d3",1.3863,3
-88,"unprimed cells",1.3863,3
-88,"lps stimulation",1.3863,3
-88,"il-4 gene",1.3863,3
-88,"tax protein",1.3863,3
-88,"potent activator",1.3863,3
-88,"human interleukin",1.3863,3
-88,"inducible expression",1.3863,3
-88,"ap-1 site",1.3863,3
-88,"janus kinase",1.3863,3
-88,"hiv-1 ltr",1.3863,3
-88,"supershift assay",1.3863,3
-88,"human thymocytes",1.3863,3
-88,"saa gene",1.3863,3
-88,"hydrolytic activity",1.3863,3
-88,"specific gene",1.3863,3
-88,"erythroid differentiation",1.3863,3
-88,"anti-cd3 stimulation",1.3863,3
-88,"lps tolerance",1.3863,3
-88,"binding affinity",1.3863,3
-88,"expression of transcription",1.3863,3
-88,"dna sequences",1.3863,3
-88,"agonist activity",1.3863,3
-88,"plasma membrane",1.3863,3
-88,"x-inactivation patterns",1.3863,3
-88,"cox-2 expression",1.3863,3
-88,"steroid treatments",1.3863,3
-88,"trancriptional roles",1.3863,3
-88,"mo7e cells",1.3863,3
-88,"superoxide release",1.3863,3
-88,"beas-2b cells",1.3863,3
-88,"microbial lipoproteins",1.3863,3
-88,"TLRs",1.3863,3
-89,"heterodimer complex formation",1.0986,3
-89,"human endothelial cells",1.0986,3
-89,"respiratory distress syndrome",1.0986,5
-90,"number of glucocorticoid",0.6931,4
-90,"cytokine profiles",0.6931,3
-90,"natl. acad",0.6931,3
-90,"il-1beta promoter",0.6931,4
-90,"hypereosinophilic syndrome",0.6931,5
-90,"cell survival",0.6931,4
-90,"cd3 ligation",0.6931,3
+17,"binding factors",16.9388,26
+18,"HIV",16.8912,17
+19,"peripheral blood",15.4625,24
+20,"PKC",15.3806,15
+20,"PTK",15.3806,16
+20,"PMA",15.3806,15
+21,"tyrosine kinase",13.4297,22
+22,"activator protein",13.0213,20
+23,"monocytic cells",12.4766,19
+23,"b cells",12.4766,19
+24,"tyrosine phosphorylation",12.3506,19
+25,"ICAM-1",11.9278,12
+26,"cell activation",11.7340,18
+27,"RAR",11.4256,12
+28,"signal transducer",11.0904,17
+29,"ER",10.9517,17
+30,"nuclear factor",10.8593,17
+31,"cbf alpha",10.8131,9
+32,"erythroid cells",10.2239,16
+33,"tnf-alpha release in human monocytes",9.7296,5
+34,"gene transcription",9.7041,15
+34,"AR",9.7041,15
+35,"tnf-alpha release",9.6566,9
+36,"binding site",9.5060,15
+37,"RXR",9.4481,10
+38,"dna binding activity",9.0109,14
+39,"human t lymphocytes",8.9532,14
+40,"tnf alpha mrna",8.8519,7
+41,"PBL",8.7889,9
+41,"PBMo",8.7889,9
+42,"cell cycle",8.1791,13
+43,"TF",8.0207,13
+44,"jurkat cells",7.6246,12
+45,"EBV",7.5091,12
+46,"endothelial cells",7.4860,12
+46,"IFN-gamma",7.4860,12
+47,"kappa b",7.2285,12
+48,"nuclear extracts",6.9315,11
+48,"MDHM",6.9315,6
+48,"lps-induced nf-kappab activation",6.9315,6
+49,"activation of protein kinases",6.8663,8
+50,"regulatory elements",6.8325,11
+50,"b lymphocytes",6.8325,11
+51,"ERK",6.5917,7
+52,"t-cell activation",6.2383,10
+52,"retinoic acid receptor alpha",6.2383,6
+52,"binding activity",6.2383,10
+52,"response element",6.2383,11
+53,"CKII",6.2255,7
+54,"transcriptional regulation",6.1393,10
+55,"CTL",6.0650,10
+56,"myristate acetate",5.8918,16
+57,"cbf beta",5.5452,5
+57,"ICER",5.5452,5
+57,"protein tyrosine kinase activity",5.5452,5
+57,"NRDS",5.5452,4
+58,"nuclear nf-kappa b",5.4931,6
+58,"nf-kappa b protein",5.4931,6
+58,"activation of transcription factors",5.4931,6
+58,"all-trans retinoic acid",5.4931,6
+58,"CD28RE",5.4931,5
+59,"t-cell lines",4.8520,8
+59,"il-2 production",4.8520,8
+59,"cell surface",4.8520,8
+60,"CAT",4.7134,8
+60,"lytic cycle",4.7134,8
+61,"promoter activity",4.5748,8
+62,"kappa b enhancer",4.3944,4
+62,"cepsilon germline transcripts",4.3944,5
+62,"b transcription factors",4.3944,5
+62,"erythroid-specific gene expression",4.3944,4
+62,"monocytic thp-1 cells",4.3944,5
+62,"IHES",4.3944,4
+63,"activation of genes",4.1589,7
+63,"tcf-1 alpha binding site",4.1589,3
+63,"differentiated cells",4.1589,7
+63,"globin promoter",4.1589,7
+63,"il-2 receptor",4.1589,7
+63,"family proteins",4.1589,7
+63,"transcription factor nf-kappab",4.1589,4
+63,"cell responses",4.1589,7
+63,"hiv type",4.1589,5
+63,"coproporphyrinogen oxidase",4.1589,7
+64,"tnf-alpha production",4.0236,4
+65,"inhibitor protein",3.9856,7
+65,"epithelial cells",3.9856,7
+66,"gene in t cells",3.9278,7
+67,"nf-kappab dna",3.8451,5
+68,"tnf mrna accumulation",3.5835,3
+69,"u937 cells",3.4657,6
+69,"cushing 's disease",3.4657,6
+69,"nuclear translocation",3.4657,6
+69,"cell receptor",3.4657,6
+69,"surface expression",3.4657,6
+69,"thp-1 cells",3.4657,6
+69,"il-1 beta",3.4657,6
+69,"cell adhesion",3.4657,6
+69,"stat proteins",3.4657,6
+69,"p elements",3.4657,6
+69,"cytokine genes",3.4657,6
+69,"nuclear proteins",3.4657,6
+69,"induction of expression",3.4657,6
+69,"il-2 promoter",3.4657,6
+69,"p-like elements",3.4657,5
+69,"immune system",3.4657,6
+69,"cell functions",3.4657,6
+69,"lps-induced activity",3.4657,7
+69,"PGE2",3.4657,6
+69,"gene induction",3.4657,6
+69,"murine t cells",3.4657,6
+70,"tcr alpha enhancer",3.2958,4
+70,"polymerase chain reaction",3.2958,3
+70,"kappa b-like site",3.2958,4
+70,"tf gene",3.2958,4
+70,"tf site",3.2958,4
+70,"syk tyrosine kinase",3.2958,3
+70,"gamma response region",3.2958,4
+70,"acute promyelocytic leukemia",3.2958,4
+70,"ifn-gamma production",3.2958,4
+70,"il-1beta promoter activity",3.2958,3
+70,"erythroid cell survival",3.2958,3
+70,"bronchial epithelial cells",3.2958,4
+70,"serine phosphorylation of stat3",3.2958,3
+70,"human monocytic cells",3.2958,4
+71,"transient expression",3.2924,6
+72,"hiv-1 replication",3.2347,6
+72,"il-9 gene",3.2347,6
+73,"cbf alpha subunit",3.2189,3
+74,"tcf-1 alpha",3.0036,6
+74,"blood cells",3.0036,6
+75,"phorbol ester",2.7726,4
+75,"cell types",2.7726,5
+75,"AD",2.7726,5
+75,"enhanced activity",2.7726,5
+75,"immune response",2.7726,5
+75,"nuclear compartment",2.7726,5
+75,"rel proteins",2.7726,4
+75,"nonerythroid cells",2.7726,5
+75,"human peripheral blood monocytes",2.7726,3
+75,"monocytic thp-1 cell line",2.7726,3
+75,"nuclear complex",2.7726,5
+75,"alpha b",2.7726,5
+75,"inhibitory effect",2.7726,5
+75,"expression of il-2",2.7726,5
+75,"myeloid cells",2.7726,5
+75,"embryonic-fetal liver",2.7726,5
+75,"activation in t lymphocytes",2.7726,5
+75,"family members",2.7726,5
+75,"human leukemias",2.7726,5
+75,"plc gamma",2.7726,4
+75,"PDTC",2.7726,5
+75,"binding proteins",2.7726,5
+75,"lps-induced nf-kappab dna",2.7726,3
+75,"neutrophil maturation",2.7726,5
+76,"cat reporter",2.7465,4
+77,"reporter gene",2.5415,5
+78,"beta interferon promoter",2.1972,3
+78,"human mononuclear cells",2.1972,3
+78,"androgen receptor gene",2.1972,3
+78,"ap-1 transcription factor",2.1972,3
+78,"phospholipase c gamma",2.1972,3
+78,"ebv sm",2.1972,3
+78,"dna binding specificities",2.1972,3
+78,"50-kda nf-kappa b",2.1972,3
+78,"regulation of gene expression",2.1972,3
+78,"rna polymerase ii",2.1972,3
+78,"expression of cd40 antigen",2.1972,3
+78,"patients with hepatitis b",2.1972,3
+78,"hematopoietic growth factor",2.1972,3
+78,"kappa light chain",2.1972,3
+78,"activation of human t cells",2.1972,3
+78,"nf-kappab inhibitors",2.1972,3
+78,"gata-1 and-binding proteins",2.1972,3
+78,"fetal blood cells",2.1972,4
+78,"dna binding motif",2.1972,3
+78,"cord blood lymphocytes",2.1972,3
+78,"erythroid cell development",2.1972,3
+78,"lytic cycle genes",2.1972,3
+78,"FISH",2.1972,3
+78,"protein kinase inhibition",2.1972,3
+78,"gr in lymphocytes",2.1972,3
+78,"normal human monocytes",2.1972,3
+79,"normal cells",2.0794,4
+79,"viral production",2.0794,4
+79,"receptor alpha chain",2.0794,3
+79,"activity of dna",2.0794,4
+79,"globin gene",2.0794,4
+79,"site-directed mutagenesis",2.0794,3
+79,"cellular proliferation",2.0794,3
+79,"primary cells",2.0794,4
+79,"c-fos expression",2.0794,4
+79,"ltr activation",2.0794,4
+79,"monocyte adhesion",2.0794,4
+79,"transcription in t cells",2.0794,4
+79,"immediate-early genes",2.0794,4
+79,"lps stimulation",2.0794,3
+79,"lps response",2.0794,4
+79,"physical linkage",2.0794,3
+79,"il-4 promoter",2.0794,4
+79,"histone deacetylase",2.0794,4
+79,"cell cultures",2.0794,4
+79,"activation of ap-1",2.0794,4
+79,"activation of nf-at",2.0794,4
+79,"cytokine production",2.0794,3
+79,"il-4 receptor",2.0794,3
+79,"94-kd stat5a",2.0794,3
+79,"transient transfection",2.0794,4
+79,"cd40 antigen",2.0794,4
+79,"inflammatory response",2.0794,4
+79,"il-4ralpha chain",2.0794,3
+79,"amino acids",2.0794,4
+79,"nf-kappa b1",2.0794,4
+79,"tolerant cells",2.0794,4
+79,"lai ltr",2.0794,3
+79,"dose-dependent manner",2.0794,3
+79,"environmental estrogens",2.0794,4
+79,"clonal eosinophilia",2.0794,4
+79,"sodium salicylate",2.0794,3
+79,"SE",2.0794,4
+79,"stat3 activation",2.0794,4
+79,"monocyte apoptosis",2.0794,4
+79,"induction of apoptosis",2.0794,3
+80,"zinc fingers",1.7329,4
+80,"situ hybridization",1.7329,4
+80,"cell development",1.7329,4
+80,"il-13 gene",1.7329,4
+81,"icam-1 kappa b",1.6094,3
+82,"cell population",1.3863,3
+82,"mononuclear leukocytes",1.3863,3
+82,"hela cells",1.3863,3
+82,"alpha activity",1.3863,3
+82,"hl60 cells",1.3863,3
+82,"hypertensive patients",1.3863,3
+82,"k562 cells",1.3863,3
+82,"cell proliferation",1.3863,3
+82,"transient pseudohypoaldosteronism",1.3863,3
+82,"aldosterone receptors",1.3863,3
+82,"p50 homodimer",1.3863,3
+82,"complex in response",1.3863,3
+82,"sm protein",1.3863,3
+82,"pebp2 alpha",1.3863,3
+82,"dna binding subunit",1.3863,3
+82,"induction of vcam-1",1.3863,3
+82,"tyrosine kinase inhibitors genistein",1.3863,3
+82,"steroid hormone",1.3863,3
+82,"24,25-dihydroxyvitamin d3",1.3863,3
+82,"unprimed cells",1.3863,3
+82,"il-4 gene",1.3863,3
+82,"tax protein",1.3863,3
+82,"potent activator",1.3863,3
+82,"human interleukin",1.3863,3
+82,"inducible expression",1.3863,3
+82,"ap-1 site",1.3863,3
+82,"janus kinase",1.3863,3
+82,"molecular weight",1.3863,3
+82,"hiv-1 ltr",1.3863,3
+82,"supershift assay",1.3863,3
+82,"naive th cells",1.3863,3
+82,"human thymocytes",1.3863,3
+82,"saa gene",1.3863,3
+82,"hydrolytic activity",1.3863,3
+82,"erythroid differentiation",1.3863,3
+82,"anti-cd3 stimulation",1.3863,3
+82,"bind with higher affinity",1.3863,3
+82,"lps tolerance",1.3863,3
+82,"ltr sequence",1.3863,3
+82,"expression of certain transcription",1.3863,3
+82,"dna sequences",1.3863,3
+82,"agonist activity",1.3863,3
+82,"plasma membrane",1.3863,3
+82,"x-inactivation patterns",1.3863,3
+82,"dendritic cell",1.3863,3
+82,"cox-2 expression",1.3863,3
+82,"steroid treatments",1.3863,3
+82,"mo7e cells",1.3863,3
+82,"superoxide release",1.3863,3
+82,"beas-2b cells",1.3863,3
+82,"microbial lipoproteins",1.3863,3
+82,"TLRs",1.3863,3
+83,"heterodimer complex formation",1.0986,3
+83,"human endothelial cells",1.0986,3
+83,"respiratory distress syndrome",1.0986,5
+84,"cytokine profiles",0.6931,3
+84,"natl. acad",0.6931,3
+84,"il-1beta promoter",0.6931,4
+84,"hypereosinophilic syndrome",0.6931,5
+84,"cell survival",0.6931,4
+84,"cd3 ligation",0.6931,3

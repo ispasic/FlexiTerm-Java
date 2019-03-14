@@ -10,9 +10,12 @@ For more information, please visit the [FlexiTerm](http://users.cs.cf.ac.uk/I.Sp
 
 Software requirements to run FlexiTerm:
 
-* Java version "1.6.0" or above
-* Java(TM) SE Runtime Environment (build 1.6.0-b105)
-* Java HotSpot(TM) Client VM (build 1.6.0-b105, mixed mode)
+* Java version "1.8.0" or above
+
+Build created with:
+
+* OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_202-b08)
+* OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.202-b08, mixed mode)
 
 How to run FlexiTerm:
 
@@ -20,5 +23,11 @@ How to run FlexiTerm:
 2. OPTIONAL: Replace file stoplist.txt in "resources" folder with your own, if needed.
 3. Run FlexiTerm.bat (Windows) or FlexiTerm.sh (Unix/Linux) at "script" folder from the command line.
 4. Check results in "out" folder. They will be presented in different formats: txt, csv and html.
+
+How to build FlexiTerm:
+
+```console
+javac -cp lib/edu.mit.jwi_2.1.5.jar:lib/jazzy-core.jar:lib/m3rd_20080611.jar:lib/sqlite-jdbc-3.8.11.2.jar:lib/stanford-corenlp-2010-11-12.jar:lib/stanford-postagger.jar:lib/tinylog-1.3.5.jar src/FlexiTerm.java src/FlexiClustering.java src/Porter.java src/WordNet.java -d bin
+```
 
 You can find more information about how to use or to extend FlexiTerm in the [Wiki](https://github.com/ulopeznovoa/FlexiTerm/wiki) page associated to this repository.
