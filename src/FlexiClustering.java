@@ -53,7 +53,7 @@ public class FlexiClustering {
 // --- (global) database connection variables ---
 private static Connection con;
 private static String driver = "org.sqlite.JDBC";
-private static String url = "jdbc:sqlite:flexiterm.sqlite";
+private static String url = "jdbc:sqlite:flexiclustering.sqlite";
 
 // --- linguistic pre-processing --- ?? delete?
 //private static MaxentTagger tagger;

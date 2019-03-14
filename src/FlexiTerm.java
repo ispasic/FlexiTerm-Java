@@ -92,7 +92,7 @@ public class FlexiTerm {
 // --- (global) database connection variables ---
 private static Connection con;
 private static String driver = "org.sqlite.JDBC";
-private static String url = "jdbc:sqlite::memory:";
+private static String url = "jdbc:sqlite:flexiterm.sqlite";
 
 // --- linguistic pre-processing ---
 private static MaxentTagger tagger;
@@ -127,8 +127,42 @@ public static void main(String[] args)
     Statement stmt1 = con.createStatement();
     ResultSet rs, rs1;
     String query;
+    String tables[] = {
+            "data_document",
+            "data_sentence",
+            "data_token",
+            "stopword",
+            "term_acronym",
+            "term_bag",
+            "term_normalised",
+            "term_nested_aux",
+            "term_nested",
+
+            "term_phrase",
+            "term_phrase_temp",
+            "term_termhood",
+            "token",
+            "token_similarity",
+            "output_html",
+            "output_label",
+            "output_table",
+            "vector_space",
+            "vector_row",
+            "vector_feature",
+            "vector_name",
+            "tmp_acronym",
+            "tmp_normalised",
+
+            "data_token_position",
+            "data_token_ordered"
+    };
 
     stmt.execute("PRAGMA journal_mode = OFF;");
+
+    for (String table: tables)
+    {
+      stmt.execute(String.format("DROP TABLE IF EXISTS %s", table));
+    }
 
     query = "CREATE TABLE data_document ( id VARCHAR(30), document TEXT, verbatim text, PRIMARY KEY(id) );"; stmt.execute(query);
     query = "CREATE TABLE data_sentence ( id VARCHAR(50) PRIMARY KEY , doc_id VARCHAR(30), position INT, sentence TEXT, tagged_sentence TEXT, tags TEXT);"; stmt.execute(query);
