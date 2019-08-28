@@ -118,6 +118,7 @@ public static void main(String[] args)
   try
   {
 
+
     // --- load settings
     loadSettings("../config/settings.txt");
 
@@ -1120,6 +1121,9 @@ public static void main(String[] args)
     }
 
     con.commit();
+
+    con.createStatement().executeUpdate("backup to ../out/output.db");
+
     stmt1.close();
 
     close();  // --- SQLite database connection
